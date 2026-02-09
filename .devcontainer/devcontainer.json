@@ -1,0 +1,12 @@
+{
+	"name": "ADA Grav Theme Development",
+	"dockerFile": "Dockerfile",
+	"forwardPorts": [8000],
+	"mounts": [
+        "source=${localWorkspaceFolder},target=/workspace,type=bind"
+    ],
+    "remoteUser": "www-data",
+	"workspaceFolder": "/workspace",
+	"postStartCommand": "cd /var/www/html/ && bin/grav server"
+}
+

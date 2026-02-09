@@ -1,0 +1,32 @@
+name: Ada Theme
+slug: ada-theme
+type: theme
+version: 0.1.0
+description: Grav theme for the for the AI &amp; Data Academy (ADA) project website
+icon: rebel
+author:
+  name: David Scheidt
+  email: david.scheidt@opensenselab.org
+homepage: https://github.com/scheidtdav/grav-theme-ada-theme
+demo: http://demo.yoursite.com
+keywords: grav, theme, etc
+bugs: https://github.com/scheidtdav/grav-theme-ada-theme/issues
+readme: https://github.com/scheidtdav/grav-theme-ada-theme/blob/develop/README.md
+license: MIT
+
+dependencies:
+  - { name: grav, version: '>=1.6.0' }
+
+form:
+  validation: loose
+  fields:
+    dropdown.enabled:
+        type: toggle
+        label: Dropdown in Menu
+        highlight: 1
+        default: 1
+        options:
+          1: PLUGIN_ADMIN.ENABLED
+          0: PLUGIN_ADMIN.DISABLED
+        validate:
+          type: bool
