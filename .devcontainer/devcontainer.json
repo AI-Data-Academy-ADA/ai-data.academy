@@ -1,18 +1,21 @@
 {
-	"name": "ADA Grav Theme Development",
-	"dockerFile": "Dockerfile",
-	"forwardPorts": [8000],
-	"mounts": [
-        "source=${localWorkspaceFolder},target=/workspace,type=bind"
-    ],
-    "remoteUser": "www-data",
-	"workspaceFolder": "/workspace",
-	"postStartCommand": "cd /var/www/html/ && bin/grav server",
-	"customizations": {
-		"vscode": {
-			"extensions": [
-				"stanislav.vscode-twig"
-			]
-		}
-	}
+  "name": "ADA Grav Theme Development",
+  "dockerFile": "Dockerfile",
+  "forwardPorts": [8000],
+  "mounts": ["source=${localWorkspaceFolder},target=/workspace,type=bind"],
+  "remoteUser": "www-data",
+  "workspaceFolder": "/workspace",
+  "postStartCommand": "cd /var/www/html && bin/grav server",
+  "customizations": {
+    "vscode": {
+      "extensions": ["mblode.twig-language", "esbenp.prettier-vscode"],
+      "settings": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+        "[html]": {
+          "editor.defaultFormatter": "mblode.twig-language"
+        }
+      }
+    }
+  }
 }
