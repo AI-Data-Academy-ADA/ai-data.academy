@@ -7,6 +7,12 @@
     ],
     "remoteUser": "www-data",
 	"workspaceFolder": "/workspace",
-	"postStartCommand": "cd /var/www/html/ && bin/grav server"
+	"postStartCommand": "cd /var/www/html/ && bin/grav server",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"stanislav.vscode-twig"
+			]
+		}
+	}
 }
-
