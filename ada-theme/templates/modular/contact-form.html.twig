@@ -1,0 +1,10 @@
+<section class="content section">
+	<div class="columns is-pulled-left">
+		<div class="column">
+			{{ page.content | split('<!-- column -->') | first | raw }}
+		</div>
+		<div class="column">
+			{{ page.content | split('<!-- column -->') | slice(1) | first | raw }}
+		</div>
+	</div>
+</section>
