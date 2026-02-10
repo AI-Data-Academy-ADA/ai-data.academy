@@ -1,0 +1,42 @@
+.ada__section {
+  position: relative;
+}
+
+.ada__div--full-width-container {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.ada__div--background-left {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.ada__blockquote {
+  position: relative;
+  max-width: 43ch;
+  --bulma-content-blockquote-background-color: transparent;
+  --bulma-content-blockquote-border-left: none;
+}
+
+.ada__blockquote::before {
+  content: "“";
+  font-size: 3rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.ada__blockquote::after {
+  content: "”";
+  font-size: 3rem;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
