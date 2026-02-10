@@ -1,5 +1,18 @@
-.ada__section {
-  position: relative;
+.ada__content {
+  max-width: 70ch;
+  margin: 0 auto;
+}
+
+@media (max-width: 1344px) {
+  .ada__content {
+    padding-left: 6rem;
+  }
+}
+
+@media (max-width: 1023px) {
+  .ada__content {
+    padding-left: 0rem;
+  }
 }
 
 .ada__div--full-width-container {
@@ -16,6 +29,11 @@
   left: 0;
   top: 0;
   bottom: 0;
+
+  img {
+    height: 100%;
+    width: auto;
+  }
 }
 
 .ada__blockquote {

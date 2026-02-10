@@ -1,25 +1,26 @@
 {% do assets.addCss('theme://css/modular.ada.css') %}
-<section class="content section">
-	<div class="grid">
-		<div class="cell">
-			<figure class="image is-2by3">
-				<img src="{{url('theme://images/Ada_Lovelace_portrait.png')}}" alt="A portrait of Ada Lovelace"/>
-				<figcaption>By
-					<a href="https://en.wikipedia.org/wiki/en:Alfred_Edward_Chalon" class="extiw" title="w:en:Alfred Edward Chalon">
-						<span title="Swiss-born British portrait painter (1780–1860)">Alfred Edward Chalon</span>
-					</a>
-					-
-					<a rel="nofollow" class="external text" href="https://collection.sciencemuseum.org.uk/objects/co67823">Science Museum Group</a>, Public Domain,
-					<a href="https://commons.wikimedia.org/w/index.php?curid=28131684">Link</a>
-				</figcaption>
-			</figure>
-		</div>
-		<div class="cell">
+
+<div class="ada__div--full-width-container">
+	<div class="ada__div--background-left is-hidden-touch">
+		<img
+		src="{{url('theme://images/Ada_Lovelace_portrait.png')}}" alt="A portrait of Ada Lovelace by Alfred Edward Chalon"/>
+	<!--By
+		<a href="https://en.wikipedia.org/wiki/en:Alfred_Edward_Chalon" class="extiw" title="w:en:Alfred Edward Chalon">
+			<span title="Swiss-born British portrait painter (1780–1860)">Alfred Edward Chalon</span>
+		</a>
+		-
+		<a rel="nofollow" class="external text" href="https://collection.sciencemuseum.org.uk/objects/co67823">Science Museum Group</a>, Public Domain,
+		<a href="https://commons.wikimedia.org/w/index.php?curid=28131684">Link</a>
+	-->
+
+	</div>
+	<section class="container section">
+		<div class="content ada__content">
 			<h1 class="title uppercase-text is-size-1-tablet">Ada Lovelace</h1>
 			<blockquote class="is-size-4 ada__blockquote">
 				That brain of mine is something more than merely mortal; as time will show.
 			</blockquote>
 			{{ page.content | raw }}
 		</div>
-	</div>
-</section>
+	</section>
+</div>
