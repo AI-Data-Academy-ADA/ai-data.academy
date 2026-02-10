@@ -40,6 +40,10 @@ RUN ln -s /workspace/ada-theme /var/www/html/user/themes/ada-theme
 RUN rm /var/www/html/user/config/system.yaml
 RUN ln -s /workspace/system.yaml /var/www/html/user/config/system.yaml
 
+# remove Gravs default pages and replace with the local ones
+RUN rm -r /var/www/html/user/pages
+RUN ln -s /workspace/pages /var/www/html/user/pages
+
 WORKDIR /workspace
 USER www-data
 
