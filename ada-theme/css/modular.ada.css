@@ -16,12 +16,19 @@
 }
 
 .ada__div--full-width-container {
+  --liquid-opacity: 0.2;
   position: relative;
   width: 100vw;
   left: 50%;
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
+}
+
+@media screen and (min-width: 1024px) {
+  .ada__div--full-width-container {
+    --liquid-opacity: 1;
+  }
 }
 
 .ada__div--background-left {
@@ -33,6 +40,19 @@
   img {
     height: 100%;
     width: auto;
+  }
+}
+
+.ada__div--background-right {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  bottom: 0;
+
+  img {
+    height: 100%;
+    width: auto;
+    opacity: var(--liquid-opacity);
   }
 }
 
