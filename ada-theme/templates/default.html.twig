@@ -1,5 +1,5 @@
 {% extends 'partials/base.html.twig' %}
-{% do assets.addCss('theme://css/default.css') %}
+{% do assets.addCss('theme://css/default.css') ~ compress %}
 
 {% block content %}
 	<section class="content section pr-desktop-0">

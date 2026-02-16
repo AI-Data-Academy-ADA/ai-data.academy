@@ -8,4 +8,6 @@ content:
     dir: asc
     custom:
       - _ada
+
+liquid_top_right: true
 ---

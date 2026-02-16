@@ -15,6 +15,11 @@
   --bulma-family-primary: SchibstedGrotesk, Ubuntu, sans-serif;
   --bulma-family-secondary: SchibstedGrotesk, Ubuntu, sans-serif;
   --bulma-family-code: SchibstedGrotesk, Ubuntu, sans-serif;
+
+  .navbar {
+    /* truely transparent navbar */
+    --bulma-navbar-background-color: transparent;
+  }
 }
 
 .uppercase-text {

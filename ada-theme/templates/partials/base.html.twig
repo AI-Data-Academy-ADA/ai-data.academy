@@ -23,6 +23,9 @@
 		{% block stylesheets %}
 			{% do assets.addCss('https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css', 100) %}
 			{% do assets.addCss('theme://css/main.css', 99) ~ compress %}
+			{% if page.header.liquid_top_right == true %}
+				{% do assets.addCss('theme://css/liquid-top-right.css') ~ compress %}
+			{% endif %}
 		{% endblock %}
 
 		{% block javascripts %}{% endblock %}
