@@ -21,6 +21,7 @@ body::after {
   width: var(--liquid-3-width);
   transform: rotate(180deg);
   opacity: var(--liquid-1-opacity);
+  z-index: -1;
 }
 
 .footer-module {
