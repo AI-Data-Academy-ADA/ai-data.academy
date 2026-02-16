@@ -35,7 +35,7 @@
 <div id="navbarMain" class="navbar-menu">
 	<div class="navbar-start">
 		{% for p in pages.children.visible %}
-			{% set is_current = (p.active or p.activeChild) ? 'is-white' : '' %}
+			{% set is_current = (p.active or p.activeChild) ? 'is-light' : 'is-text' %}
 			<div class="navbar-item">
 				<a class="button is-rounded {{ is_current }}" href="{{ p.url }}">{{ p.menu|e }}</a>
 			</div>
@@ -44,7 +44,7 @@
 
 	<div class="navbar-end">
 		<div class="navbar-item">
-			<a class="button is-rounded is-white uppercase-text">
+			<a class="button is-rounded is-shadowless is-light uppercase-text">
 				KI-Day
 			</a>
 			<a class="button is-rounded is-primary uppercase-text">

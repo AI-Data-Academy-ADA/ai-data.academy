@@ -16,9 +16,30 @@
   --bulma-family-secondary: SchibstedGrotesk, Ubuntu, sans-serif;
   --bulma-family-code: SchibstedGrotesk, Ubuntu, sans-serif;
 
+  /* colors */
+  --bulma-primary-h: 267deg;
+  --bulma-primary-s: 48%;
+  --bulma-primary-l: 35%;
+  --bulma-primary-invert-l: 96%;
+  --bulma-link-h: 238deg;
+  --bulma-link-s: 49%;
+  --bulma-link-l: 35%;
+  --bulma-warning-h: 31deg;
+  --bulma-warning-s: 92%;
+  --bulma-warning-l: 59%;
+  --bulma-scheme-h: 267;
+  --bulma-scheme-s: 48%;
+  --bulma-burger-h: 267deg;
+  --bulma-burger-s: 48%;
+  --bulma-burger-l: 35%;
+
   .navbar {
     /* truely transparent navbar */
     --bulma-navbar-background-color: transparent;
+  }
+
+  .button.is-text {
+    --bulma-button-text-decoration: none;
   }
 }
 
