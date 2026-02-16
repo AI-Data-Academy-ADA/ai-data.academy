@@ -1,6 +1,12 @@
 body {
   position: relative;
   min-height: 100dvh;
+
+  --liquid-3-width: 864px;
+  --liquid-3-height: 622px;
+  --liquid-3-pos-x: -96px;
+  --liquid-3-pos-y: -218px;
+  --liquid-1-opacity: 0.2;
 }
 
 body::after {
@@ -8,10 +14,25 @@ body::after {
   content: "";
   background: url("../images/liquid3.png");
   background-repeat: no-repeat;
-  background-position: -96px -218px;
+  background-position: var(--liquid-3-pos-x) var(--liquid-3-pos-y);
   bottom: 0;
   right: 0;
-  height: 622px;
-  width: 864px;
+  height: var(--liquid-3-height);
+  width: var(--liquid-3-width);
   transform: rotate(180deg);
+  opacity: var(--liquid-1-opacity);
+}
+
+.footer-module {
+  min-height: calc(var(--liquid-3-height) + var(--liquid-3-pos-y));
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    --liquid-1-opacity: 1;
+  }
+
+  .footer-module {
+    padding-right: calc(var(--liquid-3-width) + var(--liquid-3-pos-x));
+  }
 }

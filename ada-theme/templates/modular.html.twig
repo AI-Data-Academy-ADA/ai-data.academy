@@ -2,6 +2,16 @@
 
 {% block content %}
 	{% for module in page.collection() %}
-		{{ module.content|raw }}
+		{% if module.modular and module.template != 'modular/footer' %}
+			{{ module.content|raw }}
+		{% endif %}
 	{% endfor %}
 {% endblock content %}
+
+{% block footer %}
+	{% set footer_modules = page.collection()|filter(module => module.template == 'modular/footer') %}
+
+	{% for footer in footer_modules %}
+		{{ footer.content|raw }}
+	{% endfor %}
+{% endblock %}
