@@ -1,0 +1,27 @@
+{% do assets.addCss('theme://css/modular.partner.css') ~ compress %}
+
+{% set section_css = "content box has-background-light has-text-dark is-rounded" %}
+{% set column_css = "column is-flex is-justify-content-center" %}
+{% set image = page.media.images|first %}
+
+<section class="partner section columns is-vcentered is-8">
+	{% if page.header.text_left == true %}
+		<div class="{{ column_css }}">
+			<article class="{{ section_css }}">
+				{{ page.content|raw }}
+			</article>
+		</div>
+		<aside class="{{ column_css }}">
+			<img src="{{ image.url }}" alt="{{ image.meta.alt|default(page.title) }}"/>
+		</aside>
+	{% else %}
+		<aside class="{{ column_css }}">
+			<img src="{{ image.url }}" alt="{{ image.meta.alt|default(page.title) }}"/>
+		</aside>
+		<div class="{{ column_css }}">
+			<article class="{{ section_css }}">
+				{{ page.content|raw }}
+			</article>
+		</div>
+	{% endif %}
+</section>

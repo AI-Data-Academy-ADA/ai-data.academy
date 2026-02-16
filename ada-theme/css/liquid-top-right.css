@@ -7,7 +7,7 @@ body::before {
   content: "";
   background: url("../images/liquid3.png");
   background-repeat: no-repeat;
-  top: -35%;
+  top: -20%;
   right: 0;
   height: 622px;
   width: 864px;

@@ -1,0 +1,11 @@
+.partner {
+  .box {
+    --bulma-box-padding: 2rem 2.5rem;
+    border-radius: 9999px;
+  }
+
+  img {
+    height: 100%;
+    width: auto;
+  }
+}
