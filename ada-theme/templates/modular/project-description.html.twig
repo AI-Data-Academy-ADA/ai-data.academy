@@ -1,25 +1,23 @@
 {% do assets.addCss('theme://css/modular.project-description.css') ~ compress %}
 
-<div class="project-description fixed-grid has-3-cols">
-	<div class="grid">
-		<div class="cell section">
-			<figure class="image is-2by3 clip">
-				<img src="{{url('theme://images/project-description.png')}}" alt="An ai look into a lecture hall"/>
-				<svg class="project-description__clip-path-definition">
-					<defs>
-						<clipPath id="svg-clip-path">
-							<rect height="70%" x="0" rx="20" ry="20" y="11%" width="26%"></rect>
-							<rect height="43%" x="32%" rx="20" ry="20" y="0%" width="57%"></rect>
-							<rect height="50%" x="35%" rx="20" ry="20" y="48%" width="62%"></rect>
-						</clipPath>
-					</defs>
-				</svg>
-			</figure>
-		</div>
-		<div class="cell is-col-span-2">
-			<section class="section content">
-				{{ page.content|raw }}
-			</section>
-		</div>
+<div class="project-description grid is-col-min-9">
+	<div class="cell section">
+		<figure class="image is-2by3 clip">
+			<img src="{{url('theme://images/project-description.png')}}" alt="An ai look into a lecture hall"/>
+			<svg class="project-description__clip-path-definition">
+				<defs>
+					<clipPath id="svg-clip-path">
+						<rect height="70%" x="0" rx="20" ry="20" y="11%" width="26%"></rect>
+						<rect height="43%" x="32%" rx="20" ry="20" y="0%" width="57%"></rect>
+						<rect height="50%" x="35%" rx="20" ry="20" y="48%" width="62%"></rect>
+					</clipPath>
+				</defs>
+			</svg>
+		</figure>
+	</div>
+	<div class="cell is-col-span-2-tablet">
+		<section class="section content">
+			{{ page.content|raw }}
+		</section>
 	</div>
 </div>
