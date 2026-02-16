@@ -1,0 +1,17 @@
+body {
+  position: relative;
+  min-height: 100dvh;
+}
+
+body::after {
+  position: absolute;
+  content: "";
+  background: url("../images/liquid3.png");
+  background-repeat: no-repeat;
+  background-position: -96px -218px;
+  bottom: 0;
+  right: 0;
+  height: 622px;
+  width: 864px;
+  transform: rotate(180deg);
+}

@@ -26,6 +26,9 @@
 			{% if page.header.liquid_top_right == true %}
 				{% do assets.addCss('theme://css/liquid-top-right.css') ~ compress %}
 			{% endif %}
+			{% if page.header.liquid_bottom_right == true %}
+				{% do assets.addCss('theme://css/liquid-bottom-right.css') ~ compress %}
+			{% endif %}
 		{% endblock %}
 
 		{% block javascripts %}{% endblock %}
