@@ -1,20 +1,4 @@
-{% macro loop(page) %}
-	{% for p in page.children.visible %}
-		{% set current_page = (p.active or p.activeChild) ? 'is-selected' : '' %}
-		{% if p.children.visible.count > 0 %}
-			<div class="navbar-item has-dropdown">
-				<a class="button is-rounded navbar-link {{ current_page|e}}" href="{{ p.url }}">{{p.menu|e}}</a>
-				<div class="navbar-dropdown">
-					{{ _self.loop(p) }}
-				</div>
-			</div>
-		{% else %}
-			<a class="button is-rounded navbar-item {{ current_page|e }}" href="{{ p.url }}">
-				{{ p.menu|e }}
-			</a>
-		{% endif %}
-	{% endfor %}
-{% endmacro %}
+{% do assets.addJs('theme://js/navbar.js', { loading: 'defer'}) ~ compress %}
 
 <div class="navbar-brand">
 	<a class="navbar-item" href="{{ page.canonical(true)|e }}">
