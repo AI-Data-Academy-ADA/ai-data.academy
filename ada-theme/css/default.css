@@ -1,0 +1,34 @@
+html,
+body {
+  min-height: 100dvh;
+}
+
+body {
+  position: relative;
+  --liquid-width: 352px;
+  --liquid-opacity: 0.2;
+}
+
+body::before {
+  position: absolute;
+  content: "";
+  background: url("../images/liquid1.png");
+  background-repeat: no-repeat;
+  background-position-y: var(--bulma-navbar-height);
+  width: var(--liquid-width);
+  top: var(--bulma-navbar-height);
+  right: 0;
+  bottom: 0;
+  opacity: var(--liquid-opacity);
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    --liquid-width: 450px;
+    --liquid-opacity: 1;
+  }
+
+  main.container {
+    padding-right: var(--liquid-width);
+  }
+}

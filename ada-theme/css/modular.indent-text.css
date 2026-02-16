@@ -1,4 +1,4 @@
-@media (min-width: 769px) {
+@media screen and (min-width: 769px) {
   .indent-text {
     h1:nth-child(2n) {
       margin-left: 5ch;
