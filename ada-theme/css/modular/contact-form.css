@@ -1,6 +1,26 @@
 .contact-form__section {
   padding-top: 0;
   margin-top: calc(-3 * var(--bulma-block-spacing));
+  position: relative;
+
+  --robo-ada-1-width: 250px;
+  --robo-ada-1-opacity: 0.2;
+  --robo-ada-1-z-index: -3;
+}
+
+.contact-form__section::before {
+  position: absolute;
+  content: "";
+  background: url("../../images/robo-ada1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: var(--robo-ada-1-width);
+  opacity: var(--robo-ada-1-opacity);
+  content: "";
+  z-index: var(--robo-ada-1-z-index);
 }
 
 .contact-form {
@@ -31,7 +51,7 @@
 }
 
 .contact-form::before {
-  z-index: -1;
+  z-index: -2;
   position: absolute;
   top: 0;
   left: 0;
@@ -51,5 +71,13 @@
   bottom: 0;
   width: 100%;
   height: 100%;
-  z-index: -1;
+  z-index: -2;
+}
+
+@media screen and (min-width: 768px) {
+  .contact-form__section {
+    --robo-ada-1-width: 415px;
+    --robo-ada-1-opacity: 1;
+    --robo-ada-1-z-index: -1;
+  }
 }
