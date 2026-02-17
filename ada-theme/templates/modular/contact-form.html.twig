@@ -1,10 +1,31 @@
-<section class="content section">
-	<div class="columns is-pulled-left">
-		<div class="column">
-			{{ page.content | split('<!-- column -->') | first | raw }}
-		</div>
-		<div class="column">
-			{{ page.content | split('<!-- column -->') | slice(1) | first | raw }}
+<section class="contact-form__section section has-text-light">
+	<div class="contact-form">
+		<svg class="contact-form__clip-path-definition">
+			<defs>
+				<clipPath id="svg-clip-path">
+					<rect height="50%" x="5%" rx="60" ry="60" y="25%" width="25%"></rect>
+					<rect height="70%" x="35%" rx="60" ry="60" y="15%" width="30%"></rect>
+					<rect height="60%" x="71%" rx="60" ry="60" y="30%" width="25%"></rect>
+					<circle cx="27%" cy="85%" r="5%"></circle>
+					<circle cx="86%" cy="12.5%" r="7.5%"></circle>
+					<rect height="10%" width="0.1%" x="12.5%" y="75%"></rect>
+					<rect height="0.1%" width="14.5%" x="12.5%" y="85%"></rect>
+					<rect height="17.5%" width="0.1%" x="86%" y="12.5%"></rect>
+					<rect height="0.1%" width="30%" x="56%" y="12.5%"></rect>
+					<rect height="2.5%" width="0.1%" x="56%" y="12.5%"></rect>
+					<rect height="0.1%" width="37.5%" x="2.5%" y="20%"></rect>
+					<rect height="15%" width="0.1%" x="2.5%" y="20%"></rect>
+					<rect height="0.1%" width="2.5%" x="2.5%" y="35%"></rect>
+				</clipPath>
+			</defs>
+		</svg>
+		<div class="contact-form__columns">
+			<div class="contact-form__columns--column content">
+				{{ page.content | split('<!-- column -->') | first | raw }}
+			</div>
+			<div class="contact-form__columns--column content">
+				{{ page.content | split('<!-- column -->') | slice(1) | first | raw }}
+			</div>
 		</div>
 	</div>
 </section>

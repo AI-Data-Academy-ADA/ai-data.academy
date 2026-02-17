@@ -1,13 +1,13 @@
-E-Mail:
+**E-Mail:**
 
-info@ai-data.academy
+**info@ai-data.academy**
 
 <!-- column -->
 
-Adresse:
+**Adresse:**
 
-openSenseLab gGmbH
+**openSenseLab gGmbH**
 
-Von-Steuben-Str. 21
+**Von-Steuben-Str. 21**
 
-48165 Münster
+**48165 Münster**

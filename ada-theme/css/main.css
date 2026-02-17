@@ -20,6 +20,7 @@
   --bulma-burger-h: 267deg;
   --bulma-burger-s: 48%;
   --bulma-burger-l: 35%;
+  --bulma-strong-color: currentColor;
 
   .navbar {
     /* truely transparent navbar */
