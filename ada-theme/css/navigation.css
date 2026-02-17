@@ -1,0 +1,38 @@
+.pcb-button.custom-active {
+  position: relative;
+}
+
+.pcb-button.custom-active::before {
+  position: absolute;
+  content: "";
+  top: 100%;
+  left: var(--bulma-button-padding-horizontal);
+  right: var(--bulma-button-padding-horizontal);
+  height: 56px;
+  background: url("../images/pcb.svg");
+  background-size: cover;
+}
+
+.pcb-button[href="/ki-festival"].custom-active::before {
+  filter: brightness(0) saturate(100%) invert(17%) sepia(38%) saturate(3988%)
+    hue-rotate(253deg) brightness(90%) contrast(87%);
+}
+
+html[data-theme="dark"] {
+  .pcb-button.custom-active::before {
+    position: absolute;
+    content: "";
+    top: 100%;
+    left: var(--bulma-button-padding-horizontal);
+    right: var(--bulma-button-padding-horizontal);
+    height: 60px;
+    background: url("../images/pcb.svg");
+    background-size: cover;
+    filter: invert(100%);
+  }
+
+  .pcb-button[href="/ki-festival"].custom-active::before {
+    filter: brightness(0) saturate(100%) invert(21%) sepia(87%) saturate(745%)
+      hue-rotate(233deg) brightness(94%) contrast(101%);
+  }
+}

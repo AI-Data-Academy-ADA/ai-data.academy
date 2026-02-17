@@ -29,10 +29,12 @@
 	<div class="navbar-end">
 		<div class="navbar-item">
 			<button class="button is-rounded is-shadowless" onclick="toggleTheme()" id="themeToggle">🌙 / ☀️</button>
-			<a class="button is-rounded is-shadowless is-light uppercase-text">
+			{% set is_day = page.route == "/ki-day" %}
+			{% set is_festival = page.route == "/ki-festival" %}
+			<a class="button is-rounded is-shadowless is-light uppercase-text pcb-button {{ is_day ? 'custom-active' : '' }}" href="/ki-day">
 				KI-Day
 			</a>
-			<a class="button is-rounded is-primary uppercase-text">
+			<a class="button is-rounded is-primary uppercase-text pcb-button {{ is_festival ? 'custom-active' : '' }}" href="/ki-festival">
 				KI-Festival
 			</a>
 		</div>
