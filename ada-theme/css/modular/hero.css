@@ -1,0 +1,34 @@
+.ada-hero {
+  position: relative;
+
+  .title {
+    --bulma-title-line-height: 2;
+  }
+
+  .ada-hero__level {
+    margin: 0 auto;
+    width: clamp(60%, 1024px, 40%);
+  }
+
+  @media screen and (max-width: 768px) {
+    .level,
+    .level-left {
+      align-items: flex-start;
+    }
+  }
+}
+
+.ada-hero__full-width {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  height: 100%;
+  content: "";
+  background-image: url("../../images/hero-bg.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: -1;
+}

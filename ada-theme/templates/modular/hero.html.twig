@@ -1,6 +1,27 @@
-<section class="hero">
-	<div class="hero-body">
-		<p class="title">Hero title</p>
-		<p class="subtitle">Hero subtitle</p>
+<section class="ada-hero hero is-fullheight-with-navbar">
+	<div class="hero-body ada-hero__full-width">
+		<div class="level ada-hero__level">
+			<div class="level-left">
+				<div class="level-item">
+					<h1 class="title is-1">{{ page.header.title|nl2br }}</p>
+					<div class="block"></div>
+					<div class="level">
+						<div class="level-left">
+							<a class="level-item button is-large is-rounded is-shadowless is-light uppercase-text">
+								KI-Day
+							</a>
+							<a class="level-item button is-large is-rounded is-shadowless is-dark uppercase-text">
+								KI-Festival
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="level-right is-hidden-touch">
+				<div class="level-item">
+					<img src="{{url('theme://images/robo-ada2.png')}}" alt="A robot version of Ada Lovelace"/>
+				</div>
+			</div>
+		</div>
 	</div>
 </section>
