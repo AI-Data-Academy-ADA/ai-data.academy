@@ -30,22 +30,23 @@
 
   .contact-form__columns {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     height: 100%;
     gap: 5%;
 
     .contact-form__columns--column {
       padding: 1rem;
+      width: auto;
+      height: 30%;
     }
 
     .contact-form__columns--column:nth-child(1) {
-      padding-left: calc(1rem + 5%);
-      width: 30%;
-      transform: translateY(27.5%);
+      transform: translate(0, 15%);
     }
 
     .contact-form__columns--column:nth-child(2) {
-      width: 30%;
-      transform: translateY(17.5%);
+      transform: translate(0, 0);
     }
   }
 }
@@ -59,7 +60,7 @@
   right: 0;
   background-image: url("../../images/liquid4.png");
   background-repeat: no-repeat;
-  clip-path: url("#svg-clip-path");
+  clip-path: url("#contact-form__svg--clip-path-mobile");
   content: "";
 }
 
@@ -74,10 +75,35 @@
   z-index: -2;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 769px) {
   .contact-form__section {
     --robo-ada-1-width: 415px;
     --robo-ada-1-opacity: 1;
     --robo-ada-1-z-index: -1;
+  }
+
+  .contact-form {
+    .contact-form__columns {
+      flex-direction: row;
+      align-items: unset;
+
+      .contact-form__columns--column {
+        padding: 1rem;
+        width: 30%;
+        height: auto;
+      }
+
+      .contact-form__columns--column:nth-child(1) {
+        transform: translate(20%, 27.5%);
+      }
+
+      .contact-form__columns--column:nth-child(2) {
+        transform: translate(0, 17.5%);
+      }
+    }
+  }
+
+  .contact-form::before {
+    clip-path: url("#contact-form__svg--clip-path");
   }
 }
