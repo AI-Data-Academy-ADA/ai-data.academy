@@ -25,6 +25,10 @@
   .button.is-text {
     --bulma-button-text-decoration: none;
   }
+
+  .navbar {
+    --bulma-navbar-height: 8rem;
+  }
 }
 
 @media screen and (min-width: 1024px) {
