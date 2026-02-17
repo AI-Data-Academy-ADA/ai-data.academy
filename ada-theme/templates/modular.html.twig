@@ -1,5 +1,24 @@
 {% extends 'partials/base.html.twig' %}
 
+{% block stylesheets %}
+	{{ parent() }}
+	{% for module in page.collection() %}
+		{% set module_template = module.template() ~ '.html.twig' %}
+		{% set module_css = 'theme://css/' ~ module.template() ~ '.css' %}
+		{% do assets.addCss(module_css) ~ compress %}
+	{% endfor %}
+
+{% endblock %}
+
+{% block javascripts %}
+	{{ parent() }}
+	{% for module in page.collection() %}
+		{% set module_js = 'theme://js/' ~ module.template() ~ '.js' %}
+		{% do assets.addJs(module_js, { group: 'bottom' }) ~ compress %}
+	{% endfor %}
+{% endblock %}
+
+
 {% block content %}
 	{% for module in page.collection() %}
 		{% if module.modular and module.template != 'modular/footer' %}

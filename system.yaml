@@ -90,7 +90,7 @@ pages:
     ignore_fields: ['form','forms']              # Fields that might contain Twig variables and should not be processed
 
 cache:
-  enabled: false                                  # Set to true to enable caching
+  enabled: true                                  # Set to true to enable caching
   check:
     method: file                                 # Method to check for updates in pages: file|folder|hash|none
   driver: auto                                   # One of: auto|file|apcu|memcache|wincache
