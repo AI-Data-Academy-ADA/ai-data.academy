@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="{{ (grav.language.getActive ?: grav.config.site.default_lang)|e }}">
-
 	<head>
 		{% block head deferred %}
 			<meta charset="utf-8"/>
@@ -32,7 +31,9 @@
 			{% endif %}
 		{% endblock %}
 
-		{% block javascripts %}{% endblock %}
+		{% block javascripts %}
+			{% do assets.addJs('theme://js/theme-toggle.js', { loading: 'inline'}) ~ compress %}
+		{% endblock %}
 
 		{% block assets deferred %}
 			{{ assets.css()|raw }}
@@ -44,7 +45,7 @@
 		{% block header %}
 			<header>
 				{% block header_navigation %}
-					<nav class="navbar is-transparent" role="navigation" aria-label="Hauptnavigation">
+					<nav class="navbar is-transparent section container" role="navigation" aria-label="Hauptnavigation">
 						{% include 'partials/navigation.html.twig' %}
 					</nav>
 				{% endblock %}

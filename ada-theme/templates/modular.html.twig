@@ -33,4 +33,6 @@
 	{% for footer in footer_modules %}
 		{{ footer.content|raw }}
 	{% endfor %}
+
+	{{parent()}}
 {% endblock %}

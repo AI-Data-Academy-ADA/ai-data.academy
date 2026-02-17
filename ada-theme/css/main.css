@@ -22,13 +22,15 @@
   --bulma-burger-l: 35%;
   --bulma-strong-color: currentColor;
 
+  .button.is-text {
+    --bulma-button-text-decoration: none;
+  }
+}
+
+@media screen and (min-width: 1024px) {
   .navbar {
     /* truely transparent navbar */
     --bulma-navbar-background-color: transparent;
-  }
-
-  .button.is-text {
-    --bulma-button-text-decoration: none;
   }
 }
 
