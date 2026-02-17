@@ -5,3 +5,14 @@
     }
   }
 }
+
+.just-text {
+  p:has(img) {
+    display: inline-block;
+    background-color: var(--bulma-white);
+    border-radius: 50%;
+    aspect-ratio: 1;
+    height: 192px;
+    padding: 2rem;
+  }
+}

@@ -8,4 +8,6 @@ content:
     dir: asc
     custom:
       - _hero
+      - _callout
+      - _icon-explanations
 ---
