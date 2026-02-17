@@ -1,0 +1,20 @@
+.callout__section {
+  .card {
+    background-color: var(--bulma-primary);
+    background: linear-gradient(
+      15deg,
+      var(--bulma-primary-15) 0%,
+      var(--bulma-primary) 100%
+    );
+
+    --bulma-card-radius: 3rem;
+  }
+
+  .card-content {
+    --bulma-card-content-padding: 4rem;
+  }
+
+  h1 {
+    color: inherit;
+  }
+}
