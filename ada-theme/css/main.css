@@ -16,11 +16,12 @@
   --bulma-warning-s: 92%;
   --bulma-warning-l: 59%;
   --bulma-scheme-h: 267;
-  --bulma-scheme-s: 48%;
+  --bulma-scheme-s: 12%;
   --bulma-burger-h: 267deg;
   --bulma-burger-s: 48%;
   --bulma-burger-l: 35%;
   --bulma-strong-color: currentColor;
+  --bulma-text-l: 12%;
 
   .button.is-text {
     --bulma-button-text-decoration: none;
@@ -29,6 +30,10 @@
   .navbar {
     --bulma-navbar-height: 8rem;
   }
+}
+
+[data-theme="dark"] {
+  --bulma-text-l: 96%;
 }
 
 @media screen and (min-width: 1024px) {
