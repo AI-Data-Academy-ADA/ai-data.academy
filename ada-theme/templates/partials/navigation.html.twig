@@ -25,11 +25,11 @@
 	</div>
 
 	<div class="navbar-end">
-		{% set is_day = page.route == "/ki-day" %}
+		{% set is_day = page.route == "/ki-days" %}
 		{% set is_festival = page.route == "/ki-festival" %}
 		<div class="navbar-item">
-			<a class="button is-rounded is-shadowless is-light uppercase-text pcb-button {{ is_day ? 'custom-active' : '' }}" href="/ki-day">
-				KI-Day
+			<a class="button is-rounded is-shadowless is-light uppercase-text pcb-button {{ is_day ? 'custom-active' : '' }}" href="/ki-days">
+				KI-Days
 			</a>
 			<a class="button is-rounded is-primary uppercase-text pcb-button {{ is_festival ? 'custom-active' : '' }}" href="/ki-festival">
 				KI-Festival

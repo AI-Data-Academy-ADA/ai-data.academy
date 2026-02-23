@@ -1,6 +1,6 @@
 ---
 visible: false
-title: KI-Day
+title: KI-Days
 ---
 
 Hello World
