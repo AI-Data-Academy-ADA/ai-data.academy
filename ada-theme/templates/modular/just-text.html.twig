@@ -1,3 +1,18 @@
+{% set columns = page.content | split("<!-- column -->")  %}
+{% set has_columns = columns | length > 1 %}
+
 <section class="{{ page.header.indent_text == true ? 'indent-text' : '' }} {{ page.header.center == true ? 'has-text-centered' : '' }} content section just-text">
-	{{ page.content|markdown }}
+	{% if has_columns %}
+		<div class="fixed-grid has-1-cols-mobile has-2-cols-desktop">
+			<div class="grid is-gap-8">
+				{% for col in columns %}
+					<div class="cell">
+						{{ col|markdown }}
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	{% else %}
+		{{ page.content|markdown }}
+	{% endif %}
 </section>
