@@ -60,7 +60,10 @@
 		{% endblock %}
 
 		{% block footer %}
-			<footer></footer>
+			<footer>
+				{% block footer_content %}{% endblock %}
+				{% include 'partials/funding.html.twig' %}
+			</footer>
 		{% endblock %}
 
 		{% block bottom %}

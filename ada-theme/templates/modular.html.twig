@@ -27,7 +27,7 @@
 	{% endfor %}
 {% endblock content %}
 
-{% block footer %}
+{% block footer_content %}
 	{% set footer_modules = page.collection()|filter(module => module.template == 'modular/footer') %}
 
 	{% for footer in footer_modules %}

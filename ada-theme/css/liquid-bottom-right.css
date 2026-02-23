@@ -24,7 +24,7 @@ body::after {
   z-index: -1;
 }
 
-.footer-module {
+footer {
   min-height: calc(var(--liquid-3-height) + var(--liquid-3-pos-y));
 }
 

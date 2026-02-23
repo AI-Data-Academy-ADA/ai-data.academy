@@ -22,13 +22,16 @@
   --bulma-burger-l: 35%;
   --bulma-strong-color: currentColor;
   --bulma-text-l: 12%;
+  --bulma-black-h: 267;
+  --bulma-black-s: 12%;
+  --bulma-black-l: 9%;
 
   .button.is-text {
     --bulma-button-text-decoration: none;
   }
 
+  --bulma-navbar-height: 8rem;
   .navbar {
-    --bulma-navbar-height: 8rem;
     --bulma-navbar-item-img-max-height: 6rem;
     --bulma-navbar-burger-color: var(--bulma-text);
     --bulma-burger-item-height: 2px;

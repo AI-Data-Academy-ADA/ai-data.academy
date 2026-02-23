@@ -1,5 +1,6 @@
 .ada-hero {
   position: relative;
+  margin-top: calc(-1 * var(--bulma-navbar-height));
 
   .title {
     --bulma-title-line-height: 2;
