@@ -35,4 +35,38 @@ html[data-theme="dark"] {
     filter: brightness(0) saturate(100%) invert(21%) sepia(87%) saturate(745%)
       hue-rotate(233deg) brightness(94%) contrast(101%);
   }
+
+  .navbar {
+    img.dark-brand {
+      visibility: visible;
+      display: block;
+    }
+
+    img.light-brand {
+      visibility: collapse;
+      display: none;
+    }
+  }
+}
+
+.navbar {
+  img.dark-brand {
+    visibility: collapse;
+    display: none;
+  }
+
+  img.light-brand {
+    visibility: visible;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 1215px) {
+  .navbar {
+    .navbar-end {
+      .navbar-item {
+        flex-direction: column;
+      }
+    }
+  }
 }

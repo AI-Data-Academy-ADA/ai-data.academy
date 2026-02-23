@@ -2,7 +2,8 @@
 
 <div class="navbar-brand">
 	<a class="navbar-item" href="/">
-		<img src="{{ url('theme://images/logo.png') }}" alt="Ada Project Logo"/>
+		<img class="dark-brand" src="{{ url('theme://images/logo_dark.svg') }}" alt="Ada Project Logo"/>
+		<img class="light-brand" src="{{ url('theme://images/logo.svg') }}" alt="Ada Project Logo"/>
 	</a>
 
 	<a role="button" class="navbar-burger is-light" aria-label="Navigationsmenü" aria-expanded="false" data-target="navbarMain">
@@ -24,16 +25,18 @@
 	</div>
 
 	<div class="navbar-end">
+		{% set is_day = page.route == "/ki-day" %}
+		{% set is_festival = page.route == "/ki-festival" %}
 		<div class="navbar-item">
-			<button class="button is-rounded is-shadowless" onclick="toggleTheme()" id="themeToggle">🌙 / ☀️</button>
-			{% set is_day = page.route == "/ki-day" %}
-			{% set is_festival = page.route == "/ki-festival" %}
 			<a class="button is-rounded is-shadowless is-light uppercase-text pcb-button {{ is_day ? 'custom-active' : '' }}" href="/ki-day">
 				KI-Day
 			</a>
 			<a class="button is-rounded is-primary uppercase-text pcb-button {{ is_festival ? 'custom-active' : '' }}" href="/ki-festival">
 				KI-Festival
 			</a>
+		</div>
+		<div class="navbar-item">
+			<button class="button is-text is-rounded" onclick="toggleTheme()" id="themeToggle">🌙 / ☀️</button>
 		</div>
 	</div>
 </div>

@@ -29,6 +29,14 @@
 
   .navbar {
     --bulma-navbar-height: 8rem;
+    --bulma-navbar-item-img-max-height: 6rem;
+    --bulma-navbar-burger-color: var(--bulma-text);
+    --bulma-burger-item-height: 2px;
+    --bulma-burger-item-width: 30px;
+  }
+
+  .navbar:not(:has(.navbar-menu.is-active)) {
+    --bulma-navbar-background-color: transparent;
   }
 }
 
@@ -38,7 +46,6 @@
 
 @media screen and (min-width: 1024px) {
   .navbar {
-    /* truely transparent navbar */
     --bulma-navbar-background-color: transparent;
   }
 }
