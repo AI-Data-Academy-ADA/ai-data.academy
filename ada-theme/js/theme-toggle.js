@@ -6,7 +6,7 @@ function toggleTheme() {
   localStorage.setItem("theme", newTheme);
 
   const toggle = document.getElementById("themeToggle");
-  toggle.innerHTML = currentTheme === "dark" ? "☀️" : "🌙";
+  toggle.innerHTML = newTheme === "dark" ? "☀️" : "🌙";
 }
 
 document.addEventListener("DOMContentLoaded", () => {
