@@ -1,7 +1,7 @@
 .partner {
   .box {
     --bulma-box-padding: 2rem 2.5rem;
-    border-radius: 9999px;
+    border-radius: 10vw;
   }
 
   img {

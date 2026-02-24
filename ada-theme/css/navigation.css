@@ -8,14 +8,17 @@
   top: 100%;
   left: var(--bulma-button-padding-horizontal);
   right: var(--bulma-button-padding-horizontal);
-  height: 56px;
+  height: 60px;
   background: url("../images/pcb.svg");
   background-size: cover;
+  background-position-x: 0.58rem;
+  background-repeat: no-repeat;
 }
 
 .pcb-button[href="/ki-festival"].custom-active::before {
   filter: brightness(0) saturate(100%) invert(17%) sepia(38%) saturate(3988%)
     hue-rotate(253deg) brightness(90%) contrast(87%);
+  background-position-x: 0;
 }
 
 html[data-theme="dark"] {
