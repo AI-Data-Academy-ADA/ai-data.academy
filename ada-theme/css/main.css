@@ -41,6 +41,12 @@
   .navbar:not(:has(.navbar-menu.is-active)) {
     --bulma-navbar-background-color: transparent;
   }
+
+  video {
+    border-radius: 2vw;
+    width: 100%;
+    height: auto;
+  }
 }
 
 [data-theme="dark"] {

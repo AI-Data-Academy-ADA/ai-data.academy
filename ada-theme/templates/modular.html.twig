@@ -21,7 +21,7 @@
 
 {% block content %}
 	{% for module in page.collection() %}
-		{% if module.modular and module.template != 'modular/footer' %}
+		{% if module.modular and module.template != 'modular/footer' and  module.template != 'modular/ada' %}
 			{{ module.content|raw }}
 		{% endif %}
 	{% endfor %}
@@ -35,4 +35,9 @@
 	{% endfor %}
 
 	{{parent()}}
+
+	{% set ada_module = page.collection()|filter(module => module.template == 'modular/ada')|first %}
+	{% if ada_module %}
+		{{ ada_module.content|raw}}
+	{% endif %}
 {% endblock %}
