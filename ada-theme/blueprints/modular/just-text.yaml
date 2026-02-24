@@ -1,0 +1,26 @@
+title: "Contact Form"
+extends@: default
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+      fields:
+        content:
+          fields:
+            content_description:
+              type: display
+              size: large
+              label: false
+              markdown: true
+              content: "Use `<!-- column -->` to separate the content into columns that are shown side-by-side. Once used, this is applied to all content."
+            header.indent_text:
+              type: toggle
+              label: Indents the second heading added like '# Heading' to achieve a visually interesting effect.
+              default: 0
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+              validate:
+                type: bool

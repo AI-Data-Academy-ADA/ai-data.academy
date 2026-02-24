@@ -1,0 +1,25 @@
+title: Partner
+extends@: default
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+      fields:
+        content:
+          fields:
+            media_description:
+              type: display
+              size: large
+              label: false
+              content: "The first image will be displayed next to your content."
+            header.text_left:
+              type: toggle
+              label: Text on the left hand side
+              default: 1
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+              validate:
+                type: bool

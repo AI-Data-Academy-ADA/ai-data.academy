@@ -1,0 +1,17 @@
+title: "Contact Form"
+extends@: default
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+      fields:
+        content:
+          fields:
+            content_description:
+              type: display
+              size: large
+              label: false
+              markdown: true
+              content: "Use `<!-- column -->` to separate the content of the left column from the right column."

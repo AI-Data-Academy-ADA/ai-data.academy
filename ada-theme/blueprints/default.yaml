@@ -1,0 +1,29 @@
+title: Default
+extends@: default
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+      fields:
+        content:
+          fields:
+            header.liquid_top_right:
+              type: toggle
+              label: Add a liquid shape in the background in the top right
+              default: 0
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+              validate:
+                type: bool
+            header.liquid_bottom_right:
+              type: toggle
+              label: Add a liquid shape in the background in the bottom right
+              default: 0
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+              validate:
+                type: bool
