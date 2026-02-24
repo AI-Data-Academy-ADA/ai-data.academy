@@ -61,6 +61,14 @@ html[data-theme="dark"] {
   }
 }
 
+.navbar-burger {
+  margin-inline-end: 1.5rem;
+}
+
+a.navbar-item:hover {
+  --bulma-navbar-item-background-a: 0.1;
+}
+
 @media screen and (max-width: 1215px) {
   .navbar {
     .navbar-end {

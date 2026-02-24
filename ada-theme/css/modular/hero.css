@@ -8,13 +8,17 @@
 
   .ada-hero__level {
     margin: 0 auto;
-    width: clamp(60%, 1024px, 40%);
+    width: clamp(42ch, 60%, 1216px);
   }
 
   @media screen and (max-width: 768px) {
     .level,
     .level-left {
       align-items: flex-start;
+    }
+
+    .ada-hero__full-width {
+      padding-top: var(--bulma-navbar-height);
     }
   }
 }
@@ -31,4 +35,24 @@
   background-image: url("../../images/hero-bg.svg");
   background-size: cover;
   background-repeat: no-repeat;
+}
+
+.navbar {
+  img.dark-brand {
+    visibility: visible;
+    display: block;
+  }
+
+  img.light-brand {
+    visibility: collapse;
+    display: none;
+  }
+}
+
+.navbar-burger {
+  color: hsl(var(--bulma-white-h), var(--bulma-white-s), var(--bulma-white-l));
+}
+
+.navbar-item .button.is-text:not(:hover) {
+  color: hsl(var(--bulma-white-h), var(--bulma-white-s), var(--bulma-white-l));
 }
