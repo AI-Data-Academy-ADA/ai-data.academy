@@ -1,0 +1,39 @@
+body {
+  position: relative;
+  min-height: 100dvh;
+
+  --ada-right-width: 512px;
+  --ada-right-pos-x: 96px;
+  --ada-right-pos-y: 8rem;
+  --ada-right-opacity: 0.2;
+}
+
+body::before {
+  position: absolute;
+  content: "";
+  background: url("../images/robo-ada3.png");
+  background-repeat: no-repeat;
+  background-position: var(--ada-right-pos-x) var(--ada-right-pos-y);
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: var(--ada-right-width);
+  opacity: var(--ada-right-opacity);
+  z-index: -1;
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    --ada-right-opacity: 1;
+  }
+
+  main {
+    padding-right: calc(
+      -1 *
+        (
+          (0.5 * (100vw - min(100%, 1344px))) -
+            (var(--ada-right-width) - var(--ada-right-pos-x) - 6rem)
+        )
+    );
+  }
+}

@@ -30,6 +30,9 @@
 			{% if page.header.liquid_bottom_right == true %}
 				{% do assets.addCss('theme://css/liquid-bottom-right.css') ~ compress %}
 			{% endif %}
+			{% if page.header.ada_right == true %}
+				{% do assets.addCss('theme://css/ada-right.css') ~ compress %}
+			{% endif %}
 		{% endblock %}
 
 		{% block javascripts %}

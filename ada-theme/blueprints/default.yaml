@@ -27,3 +27,12 @@ form:
                 0: PLUGIN_ADMIN.DISABLED
               validate:
                 type: bool
+            header.ada_right:
+              type: toggle
+              label: Show the decorative Ada bot holding a laptop on the right hand side
+              default: 0
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+              validate:
+                type: bool

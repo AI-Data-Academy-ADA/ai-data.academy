@@ -6,7 +6,7 @@ body {
   --liquid-3-height: 622px;
   --liquid-3-pos-x: -96px;
   --liquid-3-pos-y: -218px;
-  --liquid-1-opacity: 0.2;
+  --liquid-3-opacity: 0.2;
 }
 
 body::after {
@@ -20,7 +20,7 @@ body::after {
   height: var(--liquid-3-height);
   width: var(--liquid-3-width);
   transform: rotate(180deg);
-  opacity: var(--liquid-1-opacity);
+  opacity: var(--liquid-3-opacity);
   z-index: -1;
 }
 
@@ -30,7 +30,7 @@ footer {
 
 @media screen and (min-width: 1024px) {
   body {
-    --liquid-1-opacity: 1;
+    --liquid-3-opacity: 1;
   }
 
   .footer-module {
