@@ -10,6 +10,56 @@ and activate it as usual (either via Admin gui or via configuration file).
 
 ## Usage
 
+Use either the default or the modular page when creating content.
+For the modular page, see a list of available modules and their features below.
+
+There are some page features that can be enabled on a per page basis, usually of a
+decorative nature. See [Page Features](#page-features).
+
+### Navigation
+
+This theme only supports a single level of navigation in its menu.
+You may create subpages, however they will not show up in the navigation bar
+at the top of the page.
+All top-level pages that are marked as `visible` in Grav, will be shown in the navigation bar.
+
+The links to the special pages `ki-days` and `ki-festival` are hardcoded and the corresponding pages
+should be set to **not visible** in your Grav page.
+
+### Page Features
+
+- Decorative liquid shape in the top right
+  - Adds a shape to the pages background in the top right
+  - Activate by enabling the "Add a liquid shape in the background in the top right" option in the content section of a page or module or by setting the `header.liquid_top_right`
+- Decorative liquid shape in the bottom right
+  - Adds a shape to the pages background in the bottom right
+  - Activate by enabling the "Add a liquid shape in the background in the bottom right" option in the content section of a page or module or by setting the `header.liquid_bottom_right`
+
+### Modules
+
+- ada
+  - A module showing a quote and a picture of Ada Lovelace with optional content below
+  - Is shown in the footer of the page
+- callout
+  - A card like, centered container to host some text with a background in the primary purple color and white text
+- contact-form
+  - A two column layout with a styled background to host contact information
+  - Columns are split by the `<!-- column -->` separator in the modules content: Everything before will be shown in the first column, everything after in the second one.
+- footer
+  - A footer module to show arbitrary content next to a liquid shape decorative element
+- hero
+  - The pages hero module showing a robotic version of Ada Lovelace and links to the main `ki-days` and `ki-festival` pages
+- just-text
+  - A module to simply show text as a section supporting a couple of options
+    - When the "Indent text" option in the content section is enabled (or the `indent_text` header is true), the second `<h1>` aka the second line in the content beginning with `#` is indented to create a visually interesting effect.
+    - Columns are supported using the `<!-- column -->` separator (see contact-form), a maximum of two columns will be shown side by side and there may be an arbitrary number of columns
+- partner
+  - A module to show an image next to a pill-shaped box for the modules content
+  - The first image added to the modules media section is being used
+  - Set the "Text on the left hand side" in the modules content section to "Enabled" (or the `text_left` header to true) to have the image on the right hand side of the pill shaped box. Disabling the option switches the order.
+- project-description
+  - A section whose content is placed next to a fixed image with a clip path
+
 ## Development
 
 Prerequisites:
@@ -70,9 +120,3 @@ Changes should be applied instantly, reloading of the page is required.
 This repository also contains example pages with dummy text to showcase and test the modules with.
 The [pages](./pages/) folder is mounted in the dev container to the `user/pages` folder in Gravs root.
 Pages can simply be added or modified using VSCode and should appear on the page after a reload in the browser.
-
-## Todo Documentation
-
-- [ ] Overview of modular pages + features
-- [ ] Navigation
-  - [ ] hard links of ki-day and ki-festival
