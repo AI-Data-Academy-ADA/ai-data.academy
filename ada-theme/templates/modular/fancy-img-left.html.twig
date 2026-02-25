@@ -1,8 +1,9 @@
-<div class="project-description grid is-col-min-9">
+{% set img = page.media.images|length > 0 ? (page.media.images|first).url : url(url('theme://images/fancy-img-left-default.png')) %}
+<div class="fancy-img-left grid is-col-min-9">
 	<div class="cell section">
 		<figure class="image is-2by3 clip">
-			<img src="{{url('theme://images/project-description.png')}}" alt="An ai look into a lecture hall"/>
-			<svg class="project-description__clip-path-definition">
+			<img src="{{img}}" alt="A decorative image clipped by three rectangle with rounded corners"/>
+			<svg class="fancy-img-left__clip-path-definition">
 				<defs>
 					<clipPath id="svg-clip-path">
 						<rect height="70%" x="0" rx="20" ry="20" y="11%" width="26%"></rect>

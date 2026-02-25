@@ -57,8 +57,10 @@ should be set to **not visible** in your Grav page.
   - A module to show an image next to a pill-shaped box for the modules content
   - The first image added to the modules media section is being used
   - Set the "Text on the left hand side" in the modules content section to "Enabled" (or the `text_left` header to true) to have the image on the right hand side of the pill shaped box. Disabling the option switches the order.
-- project-description
+- fancy-img-left
   - A section whose content is placed next to a fixed image with a clip path
+  - If given, uses the first image uploaded to the modules media (will use fallback otherwise)
+    - Make sure the image you're using is has an aspect ration of 2 by 3 to prevent squishing
 
 ## Development
 

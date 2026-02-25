@@ -1,10 +1,10 @@
-.project-description {
+.fancy-img-left {
   figure.clip {
     clip-path: url("#svg-clip-path");
   }
 }
 
-.project-description__clip-path-definition {
+.fancy-img-left__clip-path-definition {
   position: absolute;
   top: 0;
   left: 0;
