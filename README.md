@@ -2,6 +2,12 @@
 
 Grav theme for the for the AI &amp; Data Academy (ADA) project website
 
+## Installation
+
+## Usage
+
+## Development
+
 ## Todo Documentation
 
 - [ ] Folder Structure for modular pages
