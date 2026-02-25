@@ -1,4 +1,4 @@
-# ai-data.academy
+# [ai-data.academy](http://ai-data.academy) Grav Theme
 
 Grav theme for the for the AI &amp; Data Academy (ADA) project website
 
