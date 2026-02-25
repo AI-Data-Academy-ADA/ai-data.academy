@@ -31,6 +31,8 @@ html[data-theme="dark"] {
     height: 60px;
     background: url("../images/pcb.svg");
     background-size: cover;
+    background-position-x: 0.58rem;
+    background-repeat: no-repeat;
     filter: invert(100%);
   }
 
