@@ -1,11 +1,18 @@
 .partner {
   .box {
-    --bulma-box-padding: 2rem 2.5rem;
+    --bulma-box-padding: 2rem 5vw;
     border-radius: 10vw;
   }
 
   img {
     height: 100%;
+    max-height: 350px;
     width: auto;
+  }
+}
+
+html[data-theme="light"] .partner {
+  img {
+    filter: invert(100%);
   }
 }
