@@ -1,0 +1,17 @@
+title: "Fancy Image on the left"
+extends@: default
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+      fields:
+        content:
+          fields:
+            content_description:
+              type: display
+              size: large
+              label: false
+              markdown: true
+              content: "The first image given in the media section will be used for the image on the left hand side. Make sure its aspect ratio is 2 by 3."
