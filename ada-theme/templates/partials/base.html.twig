@@ -12,11 +12,18 @@
 
 			<meta http-equiv="X-UA-Compatible" content="IE=edge">
 			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<meta name="apple-mobile-web-app-title" content="ADA"/>
+
 			{% include 'partials/metadata.html.twig' %}
 
 			<link rel="preload" href="{{ url('theme://fonts/SchibstedGrotesk/SchibstedGrotesk-VariableFont_wght.woff2') }}" as="font" type="font/woff2" crossorigin>
 			<link rel="icon" type="image/png" href="{{ url('theme://images/logo.png')|e }}"/>
 			<link rel="canonical" href="{{ page.canonical(true)|e }}"/>
+			<link rel="icon" type="image/png" href="{{ url('theme://images/favicon/favicon-96x96.png') }}" sizes="96x96"/>
+			<link rel="icon" type="image/svg+xml" href="{{ url('theme://images/favicon/favicon.svg') }}"/>
+			<link rel="shortcut icon" href="{{ url('theme://images/favicon/favicon.ico') }}"/>
+			<link rel="apple-touch-icon" sizes="180x180" href="{{ url('theme://images/favicon/apple-touch-icon.png') }}"/>
+			<link rel="manifest" href="{{ url('theme://images/favicon/site.webmanifest') }}"/>
 		{% endblock head %}
 
 		{% block stylesheets %}
