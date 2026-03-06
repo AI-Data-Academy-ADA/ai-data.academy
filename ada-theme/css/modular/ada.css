@@ -23,6 +23,10 @@
   right: 50%;
   margin-left: -50vw;
   margin-right: -50vw;
+
+  img {
+    display: block;
+  }
 }
 
 @media screen and (min-width: 1024px) {
