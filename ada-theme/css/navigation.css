@@ -74,6 +74,12 @@ a.navbar-item:hover {
   --bulma-navbar-item-background-a: 0.1;
 }
 
+@media screen and (max-width: 1024px) {
+  .navbar-brand-image-container {
+    margin-inline-start: clamp(30px, 10%, 10rem);
+  }
+}
+
 @media screen and (max-width: 1215px) {
   .navbar {
     .navbar-end {
