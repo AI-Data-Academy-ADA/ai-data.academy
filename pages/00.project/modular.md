@@ -9,6 +9,7 @@ content:
     custom:
       - _project
       - _framework
+      - _booking
 
 liquid_bottom_right: true
 ---

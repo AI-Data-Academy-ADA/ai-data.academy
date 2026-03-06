@@ -1,0 +1,13 @@
+:root:has(.pretix-widget-wrapper) {
+  --pretix-brand-primary: var(--bulma-primary-55);
+  --pretix-brand-primary-darken-10: var(--bulma-primary-10);
+  --pretix-brand-primary-darken-15: var(--bulma-primary-15);
+  --pretix-brand-primary-darken-17: var(--bulma-primary-17);
+}
+
+:root[data-theme="dark"]:has(.pretix-widget-wrapper) {
+  --pretix-brand-primary: var(--bulma-primary-55);
+  --pretix-brand-primary-darken-10: var(--bulma-primary-10-invert);
+  --pretix-brand-primary-darken-15: var(--bulma-primary-15-invert);
+  --pretix-brand-primary-darken-17: var(--bulma-primary-17-invert);
+}

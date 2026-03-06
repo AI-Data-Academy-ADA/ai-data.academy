@@ -1,0 +1,29 @@
+title: "Contact Form"
+extends@: default
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+      fields:
+        content:
+          fields:
+            header.css_url:
+              type: display
+              size: large
+              label: false
+              markdown: true
+              content: "The css url for the pretix widget e.g. https://pretix.eu/demo/democon/widget/v2.css"
+            header.js_url:
+              type: display
+              size: large
+              label: false
+              markdown: true
+              content: "The js url for the pretix widget e.g. https://pretix.eu/widget/v2.en.js"
+            header.event_url:
+              type: display
+              size: large
+              label: false
+              markdown: true
+              content: "The css url for the pretix widget e.g. https://pretix.eu/demo/democon/"
