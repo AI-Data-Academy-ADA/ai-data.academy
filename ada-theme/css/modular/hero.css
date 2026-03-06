@@ -37,7 +37,7 @@
   background-repeat: no-repeat;
 }
 
-.navbar {
+.navbar:not(:has(.is-active)) {
   img.dark-brand {
     visibility: visible;
     display: block;
@@ -47,12 +47,20 @@
     visibility: collapse;
     display: none;
   }
-}
 
-.navbar-burger {
-  color: hsl(var(--bulma-white-h), var(--bulma-white-s), var(--bulma-white-l));
-}
+  .navbar-burger {
+    color: hsl(
+      var(--bulma-white-h),
+      var(--bulma-white-s),
+      var(--bulma-white-l)
+    );
+  }
 
-.navbar-item .button.is-text:not(:hover) {
-  color: hsl(var(--bulma-white-h), var(--bulma-white-s), var(--bulma-white-l));
+  .navbar-item .button.is-text:not(:hover) {
+    color: hsl(
+      var(--bulma-white-h),
+      var(--bulma-white-s),
+      var(--bulma-white-l)
+    );
+  }
 }
