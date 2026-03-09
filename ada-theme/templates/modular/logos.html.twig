@@ -1,8 +1,11 @@
-{% set images = page.media.images %}
+{% set images = page.media.images|map(i => i.url)|merge(page.media.files|map(f => f.url)) %}
 <section class="logos section">
-	{% for i in images %}
-		<div>
-			<img src="{{ i.url }}"/>
-		</div>
-	{% endfor %}
+	<div class="content">{{ page.content|markdown }}</div>
+	<div class="logos__images">
+		{% for i in images|randomize %}
+			<div>
+				<img src="{{ i }}"/>
+			</div>
+		{% endfor %}
+	</div>
 </section>

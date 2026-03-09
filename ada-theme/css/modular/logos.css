@@ -1,24 +1,35 @@
 .logos {
   text-align: center;
+}
+
+.logos__images {
+  --gap: 1rem;
+
+  text-align: center;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: stretch;
-  gap: 15px;
+  gap: var(--gap);
 
   div {
     display: flex;
     align-items: center;
-    padding: 15px;
+    padding: var(--gap);
     background: var(--bulma-primary-light);
     border-radius: var(--bulma-radius-medium);
     transform: scale(1);
     transition-property: transform;
     transition-duration: var(--bulma-duration);
     transition-timing-function: var(--bulma-easing);
+    min-width: calc((360px - 1.5rem * 2 - var(--gap)) / 2);
     img {
-      max-width: clamp(132px, 12vw, 192px);
+      max-width: clamp(
+        calc((360px - 1.5rem * 2 - var(--gap) * 5) / 2),
+        12vw,
+        192px
+      );
       max-height: clamp(105px, 5vh, 132px);
       display: block;
     }
