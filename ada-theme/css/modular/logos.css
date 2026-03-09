@@ -1,0 +1,30 @@
+.logos {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  gap: 15px;
+
+  div {
+    display: flex;
+    align-items: center;
+    padding: 15px;
+    background: var(--bulma-primary-light);
+    border-radius: var(--bulma-radius-medium);
+    transform: scale(1);
+    transition-property: transform;
+    transition-duration: var(--bulma-duration);
+    transition-timing-function: var(--bulma-easing);
+    img {
+      max-width: clamp(132px, 12vw, 192px);
+      max-height: clamp(105px, 5vh, 132px);
+      display: block;
+    }
+  }
+
+  div:hover {
+    transform: scale(1.25);
+  }
+}

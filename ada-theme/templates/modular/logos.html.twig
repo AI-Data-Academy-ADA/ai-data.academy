@@ -1,0 +1,8 @@
+{% set images = page.media.images %}
+<section class="logos section">
+	{% for i in images %}
+		<div>
+			<img src="{{ i.url }}"/>
+		</div>
+	{% endfor %}
+</section>
