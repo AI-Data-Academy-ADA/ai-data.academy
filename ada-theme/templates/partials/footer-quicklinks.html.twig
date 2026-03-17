@@ -1,0 +1,7 @@
+<section class="section" id="navbarQuicklinks">
+    {% set quicklink_pages = taxonomy.findTaxonomy({'tag': 'quicklink'}) %}
+    {% for p in quicklink_pages %}
+        {% set is_current = (p.active or p.activeChild) ? 'is-light' : 'is-text' %}
+            <a class="button is-rounded {{ is_current }}" href="{{ p.url }}">{{ p.menu|e }}</a>
+    {% endfor %}
+</section>
