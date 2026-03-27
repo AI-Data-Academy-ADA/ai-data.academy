@@ -1,0 +1,35 @@
+.team__div--full-width-container {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+.team__div--full-width-container::after {
+  position: absolute;
+  content: "";
+  background: url("../../images/pcb.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.2;
+  top: 0;
+  right: 2vw;
+  width: calc(565px / 3);
+  height: calc(323px / 3);
+}
+
+.team__div--full-width-container::before {
+  position: absolute;
+  content: "";
+  background: url("../../images/pcb.svg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  transform: rotate(180deg);
+  opacity: 0.2;
+  bottom: 0;
+  right: 16vw;
+  width: calc(565px / 5);
+  height: calc(323px / 5);
+}

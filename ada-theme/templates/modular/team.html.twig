@@ -1,0 +1,27 @@
+<div class="team__div--full-width-container has-background-light has-text-dark">
+	<section class="container section">
+		<div class="content team__content">
+			<h1 class="title uppercase-text is-size-1-tablet has-text-dark">{{ page.title }}</h1>
+			{{ page.content | raw }}
+			{% for m in page.media.images | randomize %}
+				<div class="is-flex is-align-items-center" style="gap: 4rem;">
+					<div>
+						<figure class="image is-128x128">
+							<img src="{{ m.url }}" alt="{{ m.meta.title }}" class="is-rounded"/>
+						</figure>
+					</div>
+					<div>
+						<article>
+							<h3 class="title is-3 has-text-dark">
+								{{ m.meta.title }}
+							</h3>
+							<div class="content">
+								{{ m.meta.description | markdown }}
+							</div>
+						</article>
+					</div>
+				</div>
+			</div>
+		{% endfor %}
+	</div>
+</section></div>
