@@ -24,3 +24,12 @@ form:
                 0: PLUGIN_ADMIN.DISABLED
               validate:
                 type: bool
+            header.center:
+              type: toggle
+              label: Center the text.
+              default: 0
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
+              validate:
+                type: bool

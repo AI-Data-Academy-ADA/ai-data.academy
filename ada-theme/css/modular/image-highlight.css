@@ -21,7 +21,7 @@
 
       .slide {
         position: relative;
-        scroll-margin-top: var(--image-width);
+        scroll-margin-top: 12rem;
         scroll-snap-align: start;
         flex-basis: 100%;
         flex-shrink: 0;

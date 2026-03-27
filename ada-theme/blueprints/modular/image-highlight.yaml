@@ -24,3 +24,6 @@ form:
                 0: PLUGIN_ADMIN.DISABLED
               validate:
                 type: bool
+            header.top_title:
+              type: text
+              label: Title to add above the component
