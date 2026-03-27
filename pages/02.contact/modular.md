@@ -1,6 +1,7 @@
 ---
 title: Kontakt
-
+taxonomy:
+  tag: "quicklink"
 content:
   items: "@self.modular"
   order:

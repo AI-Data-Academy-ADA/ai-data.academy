@@ -1,5 +1,7 @@
 ---
 title: Impressum
+taxonomy:
+  tag: "quicklink"
 ---
 
 # Lorem Ipsum
