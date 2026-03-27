@@ -1,4 +1,6 @@
 :root {
+  scroll-behavior: smooth;
+
   /* typography */
   --bulma-family-primary: SchibstedGrotesk, Ubuntu, sans-serif;
   --bulma-family-secondary: SchibstedGrotesk, Ubuntu, sans-serif;
