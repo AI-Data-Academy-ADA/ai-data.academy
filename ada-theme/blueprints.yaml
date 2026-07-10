@@ -1,7 +1,7 @@
 name: Ada Theme
 slug: ada-theme
 type: theme
-version: 0.1.0
+version: 1.0.0
 description: Grav theme for the for the AI &amp; Data Academy (ADA) project website
 icon: rebel
 author:
@@ -15,4 +15,9 @@ readme: https://github.com/scheidtdav/grav-theme-ada-theme/blob/develop/README.m
 license: MIT
 
 dependencies:
-  - { name: grav, version: ">=1.6.0" }
+  - { name: grav, version: ">=1.7.0" }
+
+compatibility:
+  grav:
+    - "1.7"
+    - "2.0"
