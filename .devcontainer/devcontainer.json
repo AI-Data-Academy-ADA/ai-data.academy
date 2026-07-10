@@ -5,7 +5,7 @@
   "mounts": ["source=${localWorkspaceFolder},target=/workspace,type=bind"],
   "remoteUser": "www-data",
   "workspaceFolder": "/workspace",
-  "postStartCommand": "cd /var/www/html && bin/grav server",
+  "postStartCommand": "cd /var/www/html && php -S 0.0.0.0:8000 system/router.php",
   "customizations": {
     "vscode": {
       "extensions": ["mblode.twig-language", "esbenp.prettier-vscode"],
