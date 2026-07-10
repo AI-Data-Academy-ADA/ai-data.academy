@@ -1,0 +1,86 @@
+.seven-segment-countdown {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: rgba(112, 48, 160, 0.03);
+  border-radius: 1rem;
+  margin: 2rem auto;
+  max-width: 700px;
+}
+
+.timer-display {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  justify-content: center;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.time-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.digits-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.segment-digit {
+  font-family: 'Courier New', monospace;
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: var(--bulma-primary);
+  min-width: 35px;
+  line-height: 1;
+}
+
+.unit-label {
+  font-size: 0.8rem;
+  color: var(--bulma-primary);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 0.3rem;
+  opacity: 0.7;
+}
+
+.separator {
+  font-size: 3.5rem;
+  line-height: 1;
+  color: var(--bulma-primary);
+  font-weight: bold;
+  margin: 0 0.2rem;
+  align-self: flex-start;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 49% { opacity: 1; }
+  50%, 100% { opacity: 0.3; }
+}
+
+.countdown-label {
+  font-size: 1.1rem;
+  color: var(--bulma-primary);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+@media screen and (max-width: 768px) {
+  .segment-digit {
+    font-size: 2.2rem;
+    min-width: 26px;
+  }
+
+  .separator {
+    font-size: 2rem;
+    margin: 0 0.15rem;
+  }
+
+  .unit-label {
+    font-size: 0.65rem;
+  }
+}

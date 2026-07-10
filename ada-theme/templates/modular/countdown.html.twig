@@ -1,0 +1,85 @@
+{% do assets.addCss('theme://css/modular/countdown.css') %}
+
+<section class="content section">
+<div class="seven-segment-countdown" id="segmentCountdown">
+  <div class="timer-display">
+    <div class="time-group">
+      <div class="digits-row">
+        <div class="segment-digit" data-position="0"></div>
+        <div class="segment-digit" data-position="1"></div>
+        <div class="segment-digit" data-position="2"></div>
+      </div>
+      <div class="unit-label">Tage</div>
+    </div>
+    <div class="separator">:</div>
+    <div class="time-group">
+      <div class="digits-row">
+        <div class="segment-digit" data-position="3"></div>
+        <div class="segment-digit" data-position="4"></div>
+      </div>
+      <div class="unit-label">Std</div>
+    </div>
+    <div class="separator">:</div>
+    <div class="time-group">
+      <div class="digits-row">
+        <div class="segment-digit" data-position="5"></div>
+        <div class="segment-digit" data-position="6"></div>
+      </div>
+      <div class="unit-label">Min</div>
+    </div>
+    <div class="separator">:</div>
+    <div class="time-group">
+      <div class="digits-row">
+        <div class="segment-digit" data-position="7"></div>
+        <div class="segment-digit" data-position="8"></div>
+      </div>
+      <div class="unit-label">Sek</div>
+    </div>
+  </div>
+  {% if page.header.labels %}
+    {% for label in page.header.labels %}
+      <div class="countdown-label">{{ label }}</div>
+    {% endfor %}
+  {% endif %}
+</div>
+
+<script>
+(function() {
+  const TARGET_DATE = new Date('{{ page.header.target_date }}').getTime();
+  const COMPLETION_MESSAGE = '{{ page.header.completion_message | default("🎉 Event Started! 🎉") }}';
+
+  function updateTimer() {
+    const now = new Date().getTime();
+    const distance = TARGET_DATE - now;
+
+    const container = document.getElementById('segmentCountdown');
+
+    if (distance <= 0) {
+      container.style.display = 'none';
+      return;
+    }
+
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+    const displayTime =
+      String(days).padStart(3, '0') +
+      String(hours).padStart(2, '0') +
+      String(minutes).padStart(2, '0') +
+      String(seconds).padStart(2, '0');
+
+    displayTime.split('').forEach((digit, index) => {
+      const elem = document.querySelector(`.segment-digit[data-position="${index}"]`);
+      if (elem) {
+        elem.textContent = digit;
+      }
+    });
+  }
+
+  updateTimer();
+  setInterval(updateTimer, 1000);
+})();
+</script>
+</section>
