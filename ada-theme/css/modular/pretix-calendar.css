@@ -3,6 +3,9 @@
   --pretix-brand-primary-darken-10: var(--bulma-primary-10);
   --pretix-brand-primary-darken-15: var(--bulma-primary-15);
   --pretix-brand-primary-darken-17: var(--bulma-primary-20);
+  --pretix-border-radius-base: var(--bulma-radius);
+  --pretix-border-radius-small: var(--bulma-radius-small);
+  --pretix-border-radius-large: var(--bulma-radius-large);
 }
 
 :root[data-theme="dark"]:has(.pretix-widget-wrapper) {
