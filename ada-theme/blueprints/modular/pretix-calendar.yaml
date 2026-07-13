@@ -10,20 +10,17 @@ form:
         content:
           fields:
             header.css_url:
-              type: display
+              type: text
               size: large
-              label: false
-              markdown: true
-              content: "The css url for the pretix widget e.g. https://pretix.eu/demo/democon/widget/v2.css"
+              label: Widget CSS URL
+              help: "The css url for the pretix widget e.g. https://pretix.eu/demo/democon/widget/v2.css"
             header.js_url:
-              type: display
+              type: text
               size: large
-              label: false
-              markdown: true
-              content: "The js url for the pretix widget e.g. https://pretix.eu/widget/v2.en.js"
+              label: Widget JS URL
+              help: "The js url for the pretix widget e.g. https://pretix.eu/widget/v2.en.js"
             header.event_url:
-              type: display
+              type: text
               size: large
-              label: false
-              markdown: true
-              content: "The css url for the pretix widget e.g. https://pretix.eu/demo/democon/"
+              label: Event URL
+              help: "The event url for the pretix widget e.g. https://pretix.eu/demo/democon/"
