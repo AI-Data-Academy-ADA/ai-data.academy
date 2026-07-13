@@ -4,7 +4,8 @@
 			<h1 class="title uppercase-text is-size-1-tablet has-text-dark">{{ page.title }}</h1>
 			{{ page.content | raw }}
 			{% for m in page.media.images | randomize %}
-				<div class="is-flex is-align-items-center" style="gap: 4rem;">
+				{% set reverse = loop.index0 is odd ? 'is-flex-direction-row-reverse' : '' %}
+				<div class="is-flex is-align-items-center py-6 {{ reverse }}" style="gap: 4rem;">
 					<div>
 						<figure class="image is-128x128">
 							<img src="{{ m.url }}" alt="{{ m.meta.title }}" class="is-rounded"/>
@@ -21,7 +22,7 @@
 						</article>
 					</div>
 				</div>
-			</div>
-		{% endfor %}
-	</div>
-</section></div>
+			{% endfor %}
+		</div>
+	</section>
+</div>
