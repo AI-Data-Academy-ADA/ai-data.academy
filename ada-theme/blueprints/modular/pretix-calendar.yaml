@@ -1,4 +1,4 @@
-title: "Contact Form"
+title: "Pretix Calendar/ List View"
 extends@: default
 
 form:
