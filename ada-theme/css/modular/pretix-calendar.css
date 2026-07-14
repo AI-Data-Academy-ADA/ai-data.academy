@@ -210,23 +210,45 @@
   color: var(--bulma-text);
 }
 
-:root[data-theme="dark"] .pretix-widget input[type="text"]::-webkit-input-placeholder,
-:root[data-theme="dark"] .pretix-widget input[type="number"]::-webkit-input-placeholder,
+:root[data-theme="dark"]
+  .pretix-widget
+  input[type="text"]::-webkit-input-placeholder,
+:root[data-theme="dark"]
+  .pretix-widget
+  input[type="number"]::-webkit-input-placeholder,
 :root[data-theme="dark"] .pretix-widget select::-webkit-input-placeholder,
-:root[data-theme="dark"] .pretix-widget-alert-box input[type="text"]::-webkit-input-placeholder,
-:root[data-theme="dark"] .pretix-widget-alert-box input[type="number"]::-webkit-input-placeholder,
-:root[data-theme="dark"] .pretix-widget-alert-box select::-webkit-input-placeholder,
+:root[data-theme="dark"]
+  .pretix-widget-alert-box
+  input[type="text"]::-webkit-input-placeholder,
+:root[data-theme="dark"]
+  .pretix-widget-alert-box
+  input[type="number"]::-webkit-input-placeholder,
+:root[data-theme="dark"]
+  .pretix-widget-alert-box
+  select::-webkit-input-placeholder,
 :root[data-theme="dark"] .pretix-widget input[type="text"]::-moz-placeholder,
 :root[data-theme="dark"] .pretix-widget input[type="number"]::-moz-placeholder,
 :root[data-theme="dark"] .pretix-widget select::-moz-placeholder,
-:root[data-theme="dark"] .pretix-widget-alert-box input[type="text"]::-moz-placeholder,
-:root[data-theme="dark"] .pretix-widget-alert-box input[type="number"]::-moz-placeholder,
+:root[data-theme="dark"]
+  .pretix-widget-alert-box
+  input[type="text"]::-moz-placeholder,
+:root[data-theme="dark"]
+  .pretix-widget-alert-box
+  input[type="number"]::-moz-placeholder,
 :root[data-theme="dark"] .pretix-widget-alert-box select::-moz-placeholder,
-:root[data-theme="dark"] .pretix-widget input[type="text"]:-ms-input-placeholder,
-:root[data-theme="dark"] .pretix-widget input[type="number"]:-ms-input-placeholder,
+:root[data-theme="dark"]
+  .pretix-widget
+  input[type="text"]:-ms-input-placeholder,
+:root[data-theme="dark"]
+  .pretix-widget
+  input[type="number"]:-ms-input-placeholder,
 :root[data-theme="dark"] .pretix-widget select:-ms-input-placeholder,
-:root[data-theme="dark"] .pretix-widget-alert-box input[type="text"]:-ms-input-placeholder,
-:root[data-theme="dark"] .pretix-widget-alert-box input[type="number"]:-ms-input-placeholder,
+:root[data-theme="dark"]
+  .pretix-widget-alert-box
+  input[type="text"]:-ms-input-placeholder,
+:root[data-theme="dark"]
+  .pretix-widget-alert-box
+  input[type="number"]:-ms-input-placeholder,
 :root[data-theme="dark"] .pretix-widget-alert-box select:-ms-input-placeholder {
   color: var(--bulma-text-weak);
 }
@@ -237,21 +259,34 @@
   color: var(--bulma-text);
 }
 
-:root[data-theme="dark"] .pretix-widget .pretix-widget-item-availability-col .pretix-widget-collapse-indicator {
+:root[data-theme="dark"]
+  .pretix-widget
+  .pretix-widget-item-availability-col
+  .pretix-widget-collapse-indicator {
   background-color: var(--bulma-background);
   border-color: var(--bulma-border);
   color: var(--bulma-text);
 }
 
 :root[data-theme="dark"] .pretix-widget label.pretix-widget-btn-checkbox,
-:root[data-theme="dark"] .pretix-widget-alert-box label.pretix-widget-btn-checkbox {
+:root[data-theme="dark"]
+  .pretix-widget-alert-box
+  label.pretix-widget-btn-checkbox {
   background-color: var(--bulma-background);
   border-color: var(--bulma-border);
   color: var(--bulma-text);
 }
 
-:root[data-theme="dark"] .pretix-widget .pretix-widget-event-calendar .pretix-widget-event-week-table .pretix-widget-event-week-col:nth-child(even) {
-  background-color: hsl(var(--bulma-scheme-h), var(--bulma-scheme-s), calc(var(--bulma-background-l) - 3%));
+:root[data-theme="dark"]
+  .pretix-widget
+  .pretix-widget-event-calendar
+  .pretix-widget-event-week-table
+  .pretix-widget-event-week-col:nth-child(even) {
+  background-color: hsl(
+    var(--bulma-scheme-h),
+    var(--bulma-scheme-s),
+    calc(var(--bulma-background-l) - 3%)
+  );
 }
 
 :root[data-theme="dark"] .pretix-widget .pretix-widget-event-calendar-table th,
@@ -271,4 +306,16 @@
 
 :root[data-theme="dark"] .pretix-widget .pretix-widget-item-picture-link {
   filter: invert(1);
+}
+
+/* Fix hover background on list entries in dark mode */
+:root[data-theme="dark"] .pretix-widget .pretix-widget-event-list-entry:hover,
+:root[data-theme="dark"] .pretix-widget .pretix-widget-event-list-entry:active,
+:root[data-theme="dark"] .pretix-widget .pretix-widget-event-list-entry:focus {
+  background-color: hsl(
+    var(--bulma-scheme-h),
+    var(--bulma-scheme-s),
+    calc(var(--bulma-background-l) - 5%)
+  );
+  color: var(--bulma-text);
 }
