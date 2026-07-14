@@ -1,6 +1,3 @@
-{% do assets.addCss(page.header.css_url, { crossorigin: 'anonymous' }) %}
-{% do assets.addJs(page.header.js_url, { loading: 'async', crossorigin: 'anonymous' }) %}
-
 <section class="content section">
 	<pretix-widget event="{{ page.header.event_url }}"></pretix-widget>
 	<noscript>

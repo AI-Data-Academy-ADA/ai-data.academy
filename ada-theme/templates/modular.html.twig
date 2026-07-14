@@ -6,6 +6,12 @@
 		{% set module_template = module.template() ~ '.html.twig' %}
 		{% set module_css = 'theme://css/' ~ module.template() ~ '.css' %}
 		{% do assets.addCss(module_css) ~ compress %}
+
+		{# Modules that require external dependencies #}
+		{% if module_template == 'modular/pretix-calendar.html.twig' and module.header.css_url and module.header.js_url %}
+			{% do assets.addCss(module.header.css_url, { crossorigin: 'anonymous' }) %}
+			{% do assets.addJs(module.header.js_url, { loading: 'async	', crossorigin: 'anonymous' }) %}
+		{% endif %}
 	{% endfor %}
 
 {% endblock %}
