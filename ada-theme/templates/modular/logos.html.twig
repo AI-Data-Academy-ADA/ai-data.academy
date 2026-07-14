@@ -1,10 +1,46 @@
-{% set images = page.media.images|map(i => i.url)|merge(page.media.files|map(f => f.url)) %}
+{% set images = page.media.images|map(i => {url: i.url, alt: i.meta.alt, title: i.meta.title, description: i.meta.description})|merge(page.media.files|map(f => {url: f.url, alt: f.meta.alt, title: f.meta.title, description: f.meta.description})) %}
 <section class="logos section">
 	<div class="content">{{ page.content|markdown }}</div>
 	<div class="logos__images">
 		{% for i in images|randomize %}
 			<div>
-				<img src="{{ i }}"/>
+				{% if i.title and i.description %}
+				{% set dialogId = i.url|md5 %}
+				<button class="logos__images--btn-open-modal" id="open_{{dialogId}}">
+					<img src="{{ i.url }}" alt="{{ i.alt|default('A logo') }}" />
+				</button>
+				<dialog class="modal" id="dialog_{{ dialogId }}" closedby="any">
+					<div class="modal-content box has-background-primary-soft">
+						<button class="logos__images--btn-close-modal button is-rounded is-primary is-pulled-right" id="close_{{dialogId}}">✖ Schließen</button>
+						<img src="{{ i.url }}" alt="{{ i.alt|default('A logo') }}" />
+						<p class="py-5">{{i.description}}</p>
+					</div>
+				</dialog>
+				<script>
+					(() => {
+						const dialogOpenBtn = document.querySelector('.logos__images--btn-open-modal#open_{{dialogId}}');
+						const dialogCloseBtn = document.querySelector('.logos__images--btn-close-modal#close_{{dialogId}}');
+						const dialog = document.getElementById('dialog_{{dialogId}}');
+			
+						dialogOpenBtn.addEventListener('click', () => {
+							if (dialog) { 
+								dialog.showModal(); 
+								dialog.classList.add('is-active');
+							}
+						});
+						dialogCloseBtn.addEventListener('click', () => {
+							if (dialog) {
+								dialog.close();								
+							}
+						});
+						dialog.addEventListener('close', () => {
+							dialog.classList.remove('is-active');
+						})
+					})();
+			  </script>
+				{% else %}
+				<img src="{{ i.url }}" alt="{{ i.alt|default('A logo') }}" />
+				{% endif %}
 			</div>
 		{% endfor %}
 	</div>

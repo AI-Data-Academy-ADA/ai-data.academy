@@ -1,11 +1,9 @@
-.logos {
+.logos .content {
   text-align: center;
 }
 
 .logos__images {
   --gap: 1rem;
-
-  text-align: center;
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -13,7 +11,7 @@
   align-items: stretch;
   gap: var(--gap);
 
-  div {
+  > div {
     flex-basis: 0;
     display: flex;
     align-items: center;
@@ -41,7 +39,27 @@
     }
   }
 
-  div:hover {
+  > div:hover {
     transform: scale(1.25);
+  }
+
+  .logos__images--btn-open-modal {
+    display: contents;
+  }
+
+  dialog {
+    background: transparent;
+    border: 0;
+  }
+
+  dialog::backdrop {
+    --dialog-backdrop-opacity: 0.5;
+
+    background: hsla(
+      var(--bulma-scheme-h),
+      var(--bulma-scheme-s),
+      var(--bulma-scheme-invert-l),
+      var(--dialog-backdrop-opacity)
+    );
   }
 }
