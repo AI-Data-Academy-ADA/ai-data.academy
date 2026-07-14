@@ -92,7 +92,7 @@
 }
 
 :root[data-theme="dark"]:has(.pretix-widget-wrapper) {
-  --pretix-brand-primary: var(--bulma-primary-light);
+  --pretix-brand-primary: var(--bulma-primary-100-invert);
   --pretix-brand-primary-darken-5: var(--bulma-primary);
   --pretix-brand-primary-darken-10: var(--bulma-primary-05-invert);
   --pretix-brand-primary-darken-15: var(--bulma-primary-10-invert);
@@ -140,7 +140,7 @@
   --pretix-brand-success-shade-25: var(--bulma-success-25-invert);
   --pretix-brand-success-shade-42: var(--bulma-success-30-invert);
   --pretix-brand-success-tint-50: var(--bulma-success-55-invert);
-  --pretix-brand-success-tint-85: var(--bulma-success-90-invert);
+  --pretix-brand-success-tint-85: var(--bulma-success-30);
   --pretix-brand-warning: var(--bulma-warning-invert);
   --pretix-brand-warning-darken-5: var(--bulma-warning-05-invert);
   --pretix-brand-warning-darken-10: var(--bulma-warning-10-invert);
