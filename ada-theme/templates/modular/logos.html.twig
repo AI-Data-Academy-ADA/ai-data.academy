@@ -13,7 +13,7 @@
 					<div class="modal-content box has-background-primary-soft">
 						<button class="logos__images--btn-close-modal button is-rounded is-primary is-pulled-right" id="close_{{dialogId}}">✖ Schließen</button>
 						<img src="{{ i.url }}" alt="{{ i.alt|default('A logo') }}" />
-						<p class="py-5">{{i.description}}</p>
+						<p class="py-5">{{i.description | markdown}}</p>
 					</div>
 				</dialog>
 				<script>
