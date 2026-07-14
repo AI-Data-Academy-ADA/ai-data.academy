@@ -1,16 +1,274 @@
 :root:has(.pretix-widget-wrapper) {
-  --pretix-brand-primary: var(--bulma-primary-55);
+  --pretix-brand-primary: var(--bulma-primary);
+  --pretix-brand-primary-darken-5: var(--bulma-primary-05);
   --pretix-brand-primary-darken-10: var(--bulma-primary-10);
   --pretix-brand-primary-darken-15: var(--bulma-primary-15);
   --pretix-brand-primary-darken-17: var(--bulma-primary-20);
+  --pretix-brand-primary-darken-20: var(--bulma-primary-25);
+  --pretix-brand-primary-lighten-5: var(--bulma-primary-55);
+  --pretix-brand-primary-lighten-20: var(--bulma-primary-70);
+  --pretix-brand-primary-lighten-30: var(--bulma-primary-80);
+  --pretix-brand-primary-lighten-40: var(--bulma-primary-85);
+  --pretix-brand-primary-lighten-48: var(--bulma-primary-90);
+  --pretix-brand-primary-lighten-50: var(--bulma-primary-95);
+  --pretix-brand-primary-lighten-53: var(--bulma-primary-95);
+  --pretix-brand-primary-lighten-55: var(--bulma-primary-95);
+  --pretix-brand-primary-tint-90: var(--bulma-primary-90);
+  --pretix-brand-primary-shade-25: var(--bulma-primary-25);
+  --pretix-brand-primary-shade-42: var(--bulma-primary-30);
+  --pretix-brand-info: var(--bulma-link);
+  --pretix-brand-info-darken-5: var(--bulma-link-05);
+  --pretix-brand-info-darken-10: var(--bulma-link-10);
+  --pretix-brand-info-darken-17: var(--bulma-link-20);
+  --pretix-brand-info-darken-20: var(--bulma-link-25);
+  --pretix-brand-info-lighten-23: var(--bulma-link-70);
+  --pretix-brand-info-lighten-25: var(--bulma-link-75);
+  --pretix-brand-info-lighten-30: var(--bulma-link-80);
+  --pretix-brand-info-lighten-33: var(--bulma-link-85);
+  --pretix-brand-info-shade-25: var(--bulma-link-25);
+  --pretix-brand-info-shade-42: var(--bulma-link-30);
+  --pretix-brand-info-tint-85: var(--bulma-link-90);
+  --pretix-brand-success: var(--bulma-success);
+  --pretix-brand-success-darken-5: var(--bulma-success-05);
+  --pretix-brand-success-darken-10: var(--bulma-success-10);
+  --pretix-brand-success-darken-12: var(--bulma-success-15);
+  --pretix-brand-success-darken-15: var(--bulma-success-20);
+  --pretix-brand-success-darken-17: var(--bulma-success-25);
+  --pretix-brand-success-darken-20: var(--bulma-success-30);
+  --pretix-brand-success-darken-30: var(--bulma-success-40);
+  --pretix-brand-success-lighten-10: var(--bulma-success-55);
+  --pretix-brand-success-lighten-20: var(--bulma-success-70);
+  --pretix-brand-success-lighten-30: var(--bulma-success-80);
+  --pretix-brand-success-lighten-35: var(--bulma-success-85);
+  --pretix-brand-success-lighten-38: var(--bulma-success-90);
+  --pretix-brand-success-lighten-40: var(--bulma-success-95);
+  --pretix-brand-success-lighten-48: var(--bulma-success-95);
+  --pretix-brand-success-lighten-50: var(--bulma-success-95);
+  --pretix-brand-success-shade-25: var(--bulma-success-25);
+  --pretix-brand-success-shade-42: var(--bulma-success-30);
+  --pretix-brand-success-tint-50: var(--bulma-success-55);
+  --pretix-brand-success-tint-85: var(--bulma-success-90);
+  --pretix-brand-warning: var(--bulma-warning);
+  --pretix-brand-warning-darken-5: var(--bulma-warning-05);
+  --pretix-brand-warning-darken-10: var(--bulma-warning-10);
+  --pretix-brand-warning-darken-15: var(--bulma-warning-15);
+  --pretix-brand-warning-darken-17: var(--bulma-warning-20);
+  --pretix-brand-warning-darken-20: var(--bulma-warning-25);
+  --pretix-brand-warning-darken-25: var(--bulma-warning-30);
+  --pretix-brand-warning-darken-30: var(--bulma-warning-40);
+  --pretix-brand-warning-darken-35: var(--bulma-warning-45);
+  --pretix-brand-warning-lighten-12: var(--bulma-warning-55);
+  --pretix-brand-warning-lighten-31: var(--bulma-warning-70);
+  --pretix-brand-warning-lighten-35: var(--bulma-warning-80);
+  --pretix-brand-warning-lighten-40: var(--bulma-warning-85);
+  --pretix-brand-warning-lighten-41: var(--bulma-warning-90);
+  --pretix-brand-warning-lighten-43: var(--bulma-warning-95);
+  --pretix-brand-warning-shade-25: var(--bulma-warning-25);
+  --pretix-brand-warning-shade-42: var(--bulma-warning-30);
+  --pretix-brand-warning-tint-50: var(--bulma-warning-55);
+  --pretix-brand-warning-tint-85: var(--bulma-warning-90);
+  --pretix-brand-warning-transparent-60: rgba(var(--bulma-warning-rgb), 0.4);
+  --pretix-brand-danger: var(--bulma-danger);
+  --pretix-brand-danger-darken-5: var(--bulma-danger-05);
+  --pretix-brand-danger-darken-10: var(--bulma-danger-10);
+  --pretix-brand-danger-darken-15: var(--bulma-danger-15);
+  --pretix-brand-danger-darken-17: var(--bulma-danger-20);
+  --pretix-brand-danger-darken-20: var(--bulma-danger-25);
+  --pretix-brand-danger-darken-30: var(--bulma-danger-40);
+  --pretix-brand-danger-lighten-5: var(--bulma-danger-55);
+  --pretix-brand-danger-lighten-15: var(--bulma-danger-70);
+  --pretix-brand-danger-lighten-25: var(--bulma-danger-80);
+  --pretix-brand-danger-lighten-30: var(--bulma-danger-85);
+  --pretix-brand-danger-lighten-33: var(--bulma-danger-90);
+  --pretix-brand-danger-lighten-43: var(--bulma-danger-95);
+  --pretix-brand-danger-lighten-45: var(--bulma-danger-95);
+  --pretix-brand-danger-shade-25: var(--bulma-danger-25);
+  --pretix-brand-danger-shade-42: var(--bulma-danger-30);
+  --pretix-brand-danger-tint-50: var(--bulma-danger-55);
+  --pretix-brand-danger-tint-85: var(--bulma-danger-90);
   --pretix-border-radius-base: var(--bulma-radius);
   --pretix-border-radius-small: var(--bulma-radius-small);
   --pretix-border-radius-large: var(--bulma-radius-large);
 }
 
 :root[data-theme="dark"]:has(.pretix-widget-wrapper) {
-  --pretix-brand-primary: var(--bulma-primary-55);
-  --pretix-brand-primary-darken-10: var(--bulma-primary-10-invert);
-  --pretix-brand-primary-darken-15: var(--bulma-primary-15-invert);
-  --pretix-brand-primary-darken-17: var(--bulma-primary-20-invert);
+  --pretix-brand-primary: var(--bulma-primary-light);
+  --pretix-brand-primary-darken-5: var(--bulma-primary);
+  --pretix-brand-primary-darken-10: var(--bulma-primary-05-invert);
+  --pretix-brand-primary-darken-15: var(--bulma-primary-10-invert);
+  --pretix-brand-primary-darken-17: var(--bulma-primary-15-invert);
+  --pretix-brand-primary-darken-20: var(--bulma-primary-20-invert);
+  --pretix-brand-primary-lighten-5: var(--bulma-primary-55-invert);
+  --pretix-brand-primary-lighten-20: var(--bulma-primary-70-invert);
+  --pretix-brand-primary-lighten-30: var(--bulma-primary-80-invert);
+  --pretix-brand-primary-lighten-40: var(--bulma-primary-85-invert);
+  --pretix-brand-primary-lighten-48: var(--bulma-primary-90-invert);
+  --pretix-brand-primary-lighten-50: var(--bulma-primary-95-invert);
+  --pretix-brand-primary-lighten-53: var(--bulma-primary-95-invert);
+  --pretix-brand-primary-lighten-55: var(--bulma-primary-95-invert);
+  --pretix-brand-primary-tint-90: var(--bulma-primary-90-invert);
+  --pretix-brand-primary-shade-25: var(--bulma-primary-25-invert);
+  --pretix-brand-primary-shade-42: var(--bulma-primary-30-invert);
+  --pretix-brand-info: var(--bulma-link-invert);
+  --pretix-brand-info-darken-5: var(--bulma-link-05-invert);
+  --pretix-brand-info-darken-10: var(--bulma-link-10-invert);
+  --pretix-brand-info-darken-17: var(--bulma-link-20-invert);
+  --pretix-brand-info-darken-20: var(--bulma-link-25-invert);
+  --pretix-brand-info-lighten-23: var(--bulma-link-70-invert);
+  --pretix-brand-info-lighten-25: var(--bulma-link-75-invert);
+  --pretix-brand-info-lighten-30: var(--bulma-link-80-invert);
+  --pretix-brand-info-lighten-33: var(--bulma-link-85-invert);
+  --pretix-brand-info-shade-25: var(--bulma-link-25-invert);
+  --pretix-brand-info-shade-42: var(--bulma-link-30-invert);
+  --pretix-brand-info-tint-85: var(--bulma-link-90-invert);
+  --pretix-brand-success: var(--bulma-success-invert);
+  --pretix-brand-success-darken-5: var(--bulma-success-05-invert);
+  --pretix-brand-success-darken-10: var(--bulma-success-10-invert);
+  --pretix-brand-success-darken-12: var(--bulma-success-15-invert);
+  --pretix-brand-success-darken-15: var(--bulma-success-20-invert);
+  --pretix-brand-success-darken-17: var(--bulma-success-25-invert);
+  --pretix-brand-success-darken-20: var(--bulma-success-30-invert);
+  --pretix-brand-success-darken-30: var(--bulma-success-40-invert);
+  --pretix-brand-success-lighten-10: var(--bulma-success-55-invert);
+  --pretix-brand-success-lighten-20: var(--bulma-success-70-invert);
+  --pretix-brand-success-lighten-30: var(--bulma-success-80-invert);
+  --pretix-brand-success-lighten-35: var(--bulma-success-85-invert);
+  --pretix-brand-success-lighten-38: var(--bulma-success-90-invert);
+  --pretix-brand-success-lighten-40: var(--bulma-success-95-invert);
+  --pretix-brand-success-lighten-48: var(--bulma-success-95-invert);
+  --pretix-brand-success-lighten-50: var(--bulma-success-95-invert);
+  --pretix-brand-success-shade-25: var(--bulma-success-25-invert);
+  --pretix-brand-success-shade-42: var(--bulma-success-30-invert);
+  --pretix-brand-success-tint-50: var(--bulma-success-55-invert);
+  --pretix-brand-success-tint-85: var(--bulma-success-90-invert);
+  --pretix-brand-warning: var(--bulma-warning-invert);
+  --pretix-brand-warning-darken-5: var(--bulma-warning-05-invert);
+  --pretix-brand-warning-darken-10: var(--bulma-warning-10-invert);
+  --pretix-brand-warning-darken-15: var(--bulma-warning-15-invert);
+  --pretix-brand-warning-darken-17: var(--bulma-warning-20-invert);
+  --pretix-brand-warning-darken-20: var(--bulma-warning-25-invert);
+  --pretix-brand-warning-darken-25: var(--bulma-warning-30-invert);
+  --pretix-brand-warning-darken-30: var(--bulma-warning-40-invert);
+  --pretix-brand-warning-darken-35: var(--bulma-warning-45-invert);
+  --pretix-brand-warning-lighten-12: var(--bulma-warning-55-invert);
+  --pretix-brand-warning-lighten-31: var(--bulma-warning-70-invert);
+  --pretix-brand-warning-lighten-35: var(--bulma-warning-80-invert);
+  --pretix-brand-warning-lighten-40: var(--bulma-warning-85-invert);
+  --pretix-brand-warning-lighten-41: var(--bulma-warning-90-invert);
+  --pretix-brand-warning-lighten-43: var(--bulma-warning-95-invert);
+  --pretix-brand-warning-shade-25: var(--bulma-warning-25-invert);
+  --pretix-brand-warning-shade-42: var(--bulma-warning-30-invert);
+  --pretix-brand-warning-tint-50: var(--bulma-warning-55-invert);
+  --pretix-brand-warning-tint-85: var(--bulma-warning-90-invert);
+  --pretix-brand-warning-transparent-60: rgba(var(--bulma-warning-rgb), 0.4);
+  --pretix-brand-danger: var(--bulma-danger-invert);
+  --pretix-brand-danger-darken-5: var(--bulma-danger-05-invert);
+  --pretix-brand-danger-darken-10: var(--bulma-danger-10-invert);
+  --pretix-brand-danger-darken-15: var(--bulma-danger-15-invert);
+  --pretix-brand-danger-darken-17: var(--bulma-danger-20-invert);
+  --pretix-brand-danger-darken-20: var(--bulma-danger-25-invert);
+  --pretix-brand-danger-darken-30: var(--bulma-danger-40-invert);
+  --pretix-brand-danger-lighten-5: var(--bulma-danger-55-invert);
+  --pretix-brand-danger-lighten-15: var(--bulma-danger-70-invert);
+  --pretix-brand-danger-lighten-25: var(--bulma-danger-80-invert);
+  --pretix-brand-danger-lighten-30: var(--bulma-danger-85-invert);
+  --pretix-brand-danger-lighten-33: var(--bulma-danger-90-invert);
+  --pretix-brand-danger-lighten-43: var(--bulma-danger-95-invert);
+  --pretix-brand-danger-lighten-45: var(--bulma-danger-95-invert);
+  --pretix-brand-danger-shade-25: var(--bulma-danger-25-invert);
+  --pretix-brand-danger-shade-42: var(--bulma-danger-30-invert);
+  --pretix-brand-danger-tint-50: var(--bulma-danger-55-invert);
+  --pretix-brand-danger-tint-85: var(--bulma-danger-90-invert);
+}
+
+/* Dark mode text and background fixes */
+:root[data-theme="dark"] .pretix-widget,
+:root[data-theme="dark"] .pretix-widget-alert-box {
+  color: var(--bulma-text);
+  background-color: var(--bulma-background);
+  border-color: var(--bulma-border);
+}
+
+:root[data-theme="dark"] .pretix-widget a,
+:root[data-theme="dark"] .pretix-widget-alert-box a {
+  color: var(--bulma-link-invert);
+}
+
+:root[data-theme="dark"] .pretix-widget h3,
+:root[data-theme="dark"] .pretix-widget-alert-box h3 {
+  color: var(--bulma-text-strong);
+}
+
+:root[data-theme="dark"] .pretix-widget input[type="text"],
+:root[data-theme="dark"] .pretix-widget input[type="number"],
+:root[data-theme="dark"] .pretix-widget select,
+:root[data-theme="dark"] .pretix-widget-alert-box input[type="text"],
+:root[data-theme="dark"] .pretix-widget-alert-box input[type="number"],
+:root[data-theme="dark"] .pretix-widget-alert-box select {
+  background-color: var(--bulma-background);
+  border-color: var(--bulma-border);
+  color: var(--bulma-text);
+}
+
+:root[data-theme="dark"] .pretix-widget input[type="text"]::-webkit-input-placeholder,
+:root[data-theme="dark"] .pretix-widget input[type="number"]::-webkit-input-placeholder,
+:root[data-theme="dark"] .pretix-widget select::-webkit-input-placeholder,
+:root[data-theme="dark"] .pretix-widget-alert-box input[type="text"]::-webkit-input-placeholder,
+:root[data-theme="dark"] .pretix-widget-alert-box input[type="number"]::-webkit-input-placeholder,
+:root[data-theme="dark"] .pretix-widget-alert-box select::-webkit-input-placeholder,
+:root[data-theme="dark"] .pretix-widget input[type="text"]::-moz-placeholder,
+:root[data-theme="dark"] .pretix-widget input[type="number"]::-moz-placeholder,
+:root[data-theme="dark"] .pretix-widget select::-moz-placeholder,
+:root[data-theme="dark"] .pretix-widget-alert-box input[type="text"]::-moz-placeholder,
+:root[data-theme="dark"] .pretix-widget-alert-box input[type="number"]::-moz-placeholder,
+:root[data-theme="dark"] .pretix-widget-alert-box select::-moz-placeholder,
+:root[data-theme="dark"] .pretix-widget input[type="text"]:-ms-input-placeholder,
+:root[data-theme="dark"] .pretix-widget input[type="number"]:-ms-input-placeholder,
+:root[data-theme="dark"] .pretix-widget select:-ms-input-placeholder,
+:root[data-theme="dark"] .pretix-widget-alert-box input[type="text"]:-ms-input-placeholder,
+:root[data-theme="dark"] .pretix-widget-alert-box input[type="number"]:-ms-input-placeholder,
+:root[data-theme="dark"] .pretix-widget-alert-box select:-ms-input-placeholder {
+  color: var(--bulma-text-weak);
+}
+
+:root[data-theme="dark"] .pretix-widget .pretix-widget-info-message,
+:root[data-theme="dark"] .pretix-widget .pretix-widget-error-message {
+  background-color: var(--bulma-background);
+  color: var(--bulma-text);
+}
+
+:root[data-theme="dark"] .pretix-widget .pretix-widget-item-availability-col .pretix-widget-collapse-indicator {
+  background-color: var(--bulma-background);
+  border-color: var(--bulma-border);
+  color: var(--bulma-text);
+}
+
+:root[data-theme="dark"] .pretix-widget label.pretix-widget-btn-checkbox,
+:root[data-theme="dark"] .pretix-widget-alert-box label.pretix-widget-btn-checkbox {
+  background-color: var(--bulma-background);
+  border-color: var(--bulma-border);
+  color: var(--bulma-text);
+}
+
+:root[data-theme="dark"] .pretix-widget .pretix-widget-event-calendar .pretix-widget-event-week-table .pretix-widget-event-week-col:nth-child(even) {
+  background-color: hsl(var(--bulma-scheme-h), var(--bulma-scheme-s), calc(var(--bulma-background-l) - 3%));
+}
+
+:root[data-theme="dark"] .pretix-widget .pretix-widget-event-calendar-table th,
+:root[data-theme="dark"] .pretix-widget .pretix-widget-event-calendar-table td {
+  border-bottom-color: var(--bulma-border);
+}
+
+:root[data-theme="dark"] .pretix-widget .pretix-widget-event-calendar-table th {
+  color: var(--bulma-text-weak);
+}
+
+:root[data-theme="dark"] .pretix-widget .pretix-widget-event-calendar-day {
+  background-color: var(--bulma-background);
+  border-bottom-color: var(--bulma-border);
+  color: var(--bulma-text-weak);
+}
+
+:root[data-theme="dark"] .pretix-widget .pretix-widget-item-picture-link {
+  filter: invert(1);
 }
