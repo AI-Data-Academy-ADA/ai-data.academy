@@ -8,6 +8,8 @@ content:
     dir: asc
     custom:
       - _project
+      - _eisentraut
+      - _eisentraut2
       - _framework
       - _booking
 

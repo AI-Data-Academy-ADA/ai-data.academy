@@ -10,6 +10,7 @@ content:
       - _title
       - _opensenselab
       - _reedu
+      - _associated-partners
       - _ada
 
 liquid_top_right: true
