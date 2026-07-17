@@ -12,6 +12,11 @@
 			{% do assets.addCss(module.header.css_url, { crossorigin: 'anonymous' }) %}
 			{% do assets.addJs(module.header.js_url, { loading: 'async	', crossorigin: 'anonymous' }) %}
 		{% endif %}
+
+		{% if module_template == 'modular/geojson-map.html.twig' %}
+			{% do assets.addCss(module.header.map_css_url|default('https://unpkg.com/maplibre-gl@^5.24.0/dist/maplibre-gl.css'), { crossorigin: 'anonymous' }) %}
+			{% do assets.addJs(module.header.map_js_url|default('https://unpkg.com/maplibre-gl@^5.24.0/dist/maplibre-gl.js'), { crossorigin: 'anonymous' }) %}
+		{% endif %}
 	{% endfor %}
 
 {% endblock %}

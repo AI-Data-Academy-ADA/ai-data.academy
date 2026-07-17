@@ -1,0 +1,74 @@
+<div id="map" />
+
+{% set pin_image_url = url('theme://images/map-pin.png') %}
+{% set geojson = page.header.geojson|string %}
+{% if geojson %}
+<script>
+    const map = new maplibregl.Map({
+        style: 'https://tiles.openfreemap.org/styles/bright',
+        center: [0, 0],
+        zoom: 1,
+        container: 'map'
+    });
+
+    map.loadImage('{{ pin_image_url }}').then((img) => {
+        if (!map.hasImage('map-pin'))
+            map.addImage('map-pin', img.data, { pixelRatio: 2 });
+    })
+
+    map.on('load', () => {
+        map.addSource('geojson-source', {
+            type: 'geojson',
+            data: {{ geojson|raw }}
+        });
+
+        map.addLayer({
+            'id': 'markers',
+            'type': 'symbol',
+            'source': 'geojson-source',
+            'layout': {
+                'icon-image': 'map-pin',
+                'icon-size': 0.75,
+                'icon-allow-overlap': true,
+                'icon-optional': false
+            }
+        });
+
+        map.on('click', 'markers', (e) => {
+            const coordinates = e.features[0].geometry.coordinates.slice();
+            const description = e.features[0].properties.description;
+
+            // Ensure that if the map is zoomed out such that multiple
+            // copies of the feature are visible, the popup appears
+            // over the copy being pointed to.
+            while (Math.abs(e.lngLat.lng - coordinates[0]) > 180) {
+                coordinates[0] += e.lngLat.lng > coordinates[0] ? 360 : -360;
+            }
+
+            new maplibregl.Popup({ anchor: 'left', offset: [5, -5], 'className': 'theme-light has-text-dark content', maxWidth: '300px' })
+                .setLngLat(coordinates)
+                .setHTML(description)
+                .addTo(map);
+        });
+
+        map.on('mouseenter', 'markers', () => {
+            map.getCanvas().style.cursor = 'pointer';
+        });
+
+        map.on('mouseleave', 'markers', () => {
+            map.getCanvas().style.cursor = '';
+        });
+
+        map.once('idle', () => {
+            const features = map.querySourceFeatures('geojson-source');
+            const bounds = new maplibregl.LngLatBounds();
+            for(const f of features) {
+                console.log(f.id);
+                const [lng, lat] = f.geometry.coordinates;
+                bounds.extend([lng, lat]);
+            }
+            map.fitBounds(bounds, { padding: 100 });
+        });
+    });
+</script>
+{% endif %}

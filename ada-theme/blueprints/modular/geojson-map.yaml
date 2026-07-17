@@ -1,0 +1,29 @@
+title: "GeoJSON Map"
+extends@: default
+
+form:
+  fields:
+    tabs:
+      type: tabs
+      active: 1
+      fields:
+        content:
+          fields:
+            header.geojson:
+              type: textarea
+              label: GeoJSON
+              help: "Enter the GeoJSON data to display on the map"
+              rows: 20
+              validate:
+                type: json
+                required: true
+            header.map_css_url:
+              type: text
+              size: large
+              label: URL to the maplibre css file
+              help: "e.g. https://unpkg.com/maplibre-gl@^5.24.0/dist/maplibre-gl.css"
+            header.map_js_url:
+              type: text
+              size: large
+              label: URL to the maplibre js file
+              help: "e.g. https://unpkg.com/maplibre-gl@^5.24.0/dist/maplibre-gl.js"
