@@ -9,14 +9,22 @@ form:
       fields:
         content:
           fields:
-            header.geojson:
-              type: textarea
-              label: GeoJSON
-              help: "Enter the GeoJSON data to display on the map"
-              rows: 20
+            # header.geojson:
+            #   type: textarea
+            #   label: GeoJSON
+            #   help: "Enter the GeoJSON data as yaml to display on the map"
+            #   size: large
+            #   validate:
+            #     required: true
+            header.no_y_padding:
+              type: toggle
+              label: No vertical padding
+              default: 1
+              options:
+                1: PLUGIN_ADMIN.ENABLED
+                0: PLUGIN_ADMIN.DISABLED
               validate:
-                type: json
-                required: true
+                type: bool
             header.map_css_url:
               type: text
               size: large
