@@ -1,0 +1,31 @@
+title: Tutorial Classification
+description: Display a list of tutorials for users to select and view
+
+form:
+  fields:
+    tutorials_section:
+      type: section
+      title: Tutorials Configuration
+
+    tutorials:
+      type: array
+      label: Tutorials
+      description: Define which tutorials should be available in the classification widget
+      help: Add tutorial IDs and their display types
+      add: Add Tutorial
+      fields:
+        id:
+          type: text
+          label: Tutorial ID
+          placeholder: '6a4cb7a49729e200110fa22b'
+          help: MongoDB ObjectId of the tutorial
+          validate:
+            required: true
+        type:
+          type: select
+          label: Display Type
+          description: How this tutorial should be displayed in the widget
+          options:
+            'image': Image Gallery
+            'orientation': Orientation/Navigation
+          default: 'image'
