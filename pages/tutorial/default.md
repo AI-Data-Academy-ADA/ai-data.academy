@@ -1,0 +1,4 @@
+---
+title: Tutorial
+redirect: "/workshop"
+---

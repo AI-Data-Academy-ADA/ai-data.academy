@@ -1,7 +1,7 @@
 ---
-title: Workshops Overview
-menu: Workshops
-slug: workshops
+title: Workshop Overview
+menu: Workshop
+slug: workshop
 body_classes: "tutorial-page"
 
 content:
