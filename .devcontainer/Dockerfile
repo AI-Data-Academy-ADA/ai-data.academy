@@ -44,8 +44,6 @@ RUN ln -s /workspace/system.yaml /var/www/html/user/config/system.yaml
 RUN rm -r /var/www/html/user/pages
 RUN ln -s /workspace/pages /var/www/html/user/pages
 
-RUN ln -s /workspace/public/media /var/www/html/media
-
 WORKDIR /workspace
 USER www-data
 
