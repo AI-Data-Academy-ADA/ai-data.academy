@@ -2,10 +2,10 @@
 {# Frontmatter:
      widget_script  — filename of the widget JS, e.g. tutorial-classification-widget.js (default)
      widget_root_id — override the mount point ID (auto-derived from widget_script if omitted)
-     tutorials — JSON array of tutorial objects with id and type fields #}
+     tutorials — JSON array of tutorial objects with id and type fields
+     media_base_path — base path for tutorial media #}
 {% set widget_script = page.header.widget_script ?? 'tutorial-classification-widget.js' %}
 {% set tutorials = page.header.tutorials ?? [] %}
-
-<div id="tutorial-classification-root" class="tutorial-classification-widget" data-tutorials='{{ tutorials|json_encode }}'> </div>
+{% set media_base_path = page.header.media_base_path ?? url('theme://images/tutorial', true, true) %}<div id="tutorial-classification-root" class="tutorial-classification-widget" data-tutorials='{{ tutorials|json_encode }}' data-media-base-path="{{ media_base_path }}"> </div>
 
 <script src="{{ url('theme://js/' ~ widget_script) }}" defer></script>
