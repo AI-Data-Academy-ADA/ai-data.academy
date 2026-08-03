@@ -4,9 +4,8 @@
      widget_root_id — override the mount point ID (auto-derived from widget_script if omitted)
      tutorials — JSON array of tutorial objects with id and type fields #}
 {% set widget_script = page.header.widget_script ?? 'tutorial-classification-widget.js' %}
-{% set widget_root_id = page.header.widget_root_id ?? widget_script|replace({'-widget.js': '-root'}) %}
 {% set tutorials = page.header.tutorials ?? [] %}
 
-<div id="{{ widget_root_id }}" class="tutorial-classification-widget" data-tutorials='{{ tutorials|json_encode }}'></div>
+<div id="tutorial-classification-root" class="tutorial-classification-widget" data-tutorials='{{ tutorials|json_encode }}'> </div>
 
 <script src="{{ url('theme://js/' ~ widget_script) }}" defer></script>
