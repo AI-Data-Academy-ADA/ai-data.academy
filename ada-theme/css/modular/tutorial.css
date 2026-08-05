@@ -1,0 +1,17 @@
+/* Tutorial Classification Widget Styles */
+
+.tutorial-classification-widget {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  min-height: calc(100vh - 64px);
+  display: flex;
+  flex-direction: column;
+}
+
+.tutorial-classification-widget #tutorial-classification-root {
+  width: 100%;
+  height: 100%;
+  flex: 1;
+}
