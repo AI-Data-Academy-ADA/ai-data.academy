@@ -1,8 +1,15 @@
 <section class="section {{ page.header.no_y_padding ? 'py-0' : '' }}">
     <div id="map"></div>
     {% set pin_image_url = url('theme://images/map-pin.png') %}
-    {% set geojson = page.header.geojson|string %}
-    {% if geojson %}
+    {% set geojson = '{ "type": "FeatureCollection", "features": [' %}
+    {% for pin in page.header.geojson %}
+        {% set geojson = geojson ~ '{ "type": "Feature", "id": ' ~ loop.index ~ ', "properties": { "description": \'' ~ pin.description|markdown|replace({"\n": "", "\r": "", "\t": ""}) ~ '\' }, "geometry": { "type": "Point", "coordinates": [' ~ pin.coordinates|join(',') ~ '] }}' %}
+        {% if not loop.last %}
+            {% set geojson = geojson ~ ',' %}
+        {% endif %}
+    {% endfor %}
+    {% set geojson = geojson ~ ']}' %}
+
     <script>
         const map = new maplibregl.Map({
             style: 'https://tiles.openfreemap.org/styles/bright',
@@ -70,5 +77,4 @@
             });
         });
     </script>
-    {% endif %}
 </section>

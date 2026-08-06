@@ -16,6 +16,30 @@ form:
             #   size: large
             #   validate:
             #     required: true
+            header.geojson:
+              name: geojson
+              type: list
+              style: vertical
+              label: Map Pins
+              fields:
+                .description:
+                  type: markdown
+                  label: Description (Markdown)
+                  validate:
+                    required: true
+                .coordinates:
+                  type: array
+                  label: Coordinates (Longitude, Latitude)
+                  validate:
+                    min: 2
+                    max: 2
+                    required: true
+                  value_only: true
+                  fields:
+                    value:
+                      type: number
+                      validate:
+                        type: number
             header.no_y_padding:
               type: toggle
               label: No vertical padding
