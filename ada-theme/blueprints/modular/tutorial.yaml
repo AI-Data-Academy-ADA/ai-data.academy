@@ -39,6 +39,7 @@ form:
               label: Display Type
               description: How this tutorial should be displayed in the widget
               options:
+                "": None
                 "image": Image Gallery
                 "orientation": Orientation/Navigation
               default: "image"
