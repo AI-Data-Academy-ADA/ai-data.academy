@@ -45,22 +45,42 @@ should be set to **not visible** in your Grav page.
 - contact-form
   - A two column layout with a styled background to host contact information
   - Columns are split by the `<!-- column -->` separator in the modules content: Everything before will be shown in the first column, everything after in the second one.
-- footer
-  - A footer module to show arbitrary content next to a liquid shape decorative element
-- hero
-  - The pages hero module showing a robotic version of Ada Lovelace and links to the main `ki-days` and `ki-festival` pages
-- just-text
-  - A module to simply show text as a section supporting a couple of options
-    - When the "Indent text" option in the content section is enabled (or the `indent_text` header is true), the second `<h1>` aka the second line in the content beginning with `#` is indented to create a visually interesting effect.
-    - Columns are supported using the `<!-- column -->` separator (see contact-form), a maximum of two columns will be shown side by side and there may be an arbitrary number of columns
-- partner
-  - A module to show an image next to a pill-shaped box for the modules content
-  - The first image added to the modules media section is being used
-  - Set the "Text on the left hand side" in the modules content section to "Enabled" (or the `text_left` header to true) to have the image on the right hand side of the pill shaped box. Disabling the option switches the order.
+- countdown
+  - A module with a big countdown that works towards a datetime set in yaml
+  - Set `target_date` and optionally `completion_message` to set date and message
 - fancy-img-left
   - A section whose content is placed next to a fixed image with a clip path
   - If given, uses the first image uploaded to the modules media (will use fallback otherwise)
     - Make sure the image you're using is has an aspect ration of 2 by 3 to prevent squishing
+- footer
+  - A footer module to show arbitrary content next to a liquid shape decorative element
+- geojson-map
+  - A module allowing you to display a collection of pins on a map
+  - Set the pins via the admin GUI or via the `geojson` frontmatter property
+  - The map zooms to the bounding box of all pins by default on view
+- hero
+  - The pages hero module showing a robotic version of Ada Lovelace and links to the main `ki-days` and `ki-festival` pages
+- image-highlight
+  - A module showing a box with the text either on the left or right hand side with an image on the other hand side
+  - First image in the media section will be used and _must_ be square for it to work
+  - Use `<!-- slide -->` inside the text to separate content into slides, giving you a carousel kind of view
+- just-text
+  - A module to simply show text as a section supporting a couple of options
+    - When the "Indent text" option in the content section is enabled (or the `indent_text` header is true), the second `<h1>` aka the second line in the content beginning with `#` is indented to create a visually interesting effect.
+    - Columns are supported using the `<!-- column -->` separator (see contact-form), a maximum of two columns will be shown side by side and there may be an arbitrary number of columns
+- logos
+  - A module to show a number of square images as a randomized list with lightboxes on click
+  - Use the images meta information and provide title and description to have text in the lightbox
+- partner
+  - A module to show an image next to a pill-shaped box for the modules content
+  - The first image added to the modules media section is being used
+  - Set the "Text on the left hand side" in the modules content section to "Enabled" (or the `text_left` header to true) to have the image on the right hand side of the pill shaped box. Disabling the option switches the order.
+- pretix-calendar
+  - A module for embedding a pretix widget
+- team
+  - A module to show the members of our team
+- tutorial
+  - A module to embed the AI workshop content into the website
 
 ## Development
 
