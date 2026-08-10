@@ -25,9 +25,11 @@
 {% block javascripts %}
 	{{ parent() }}
 	{% for module in page.collection() %}
-		{% set module_js = 'theme://js/' ~ module.template() ~ '.js' %}
+		{% set module_name = module.template()|replace('modular/', '') %}
+		{% set module_js = 'theme://js/' ~ module_name ~ '.js' %}
 		{% do assets.addJs(module_js, { group: 'bottom' }) ~ compress %}
 
+		{% set module_template = module.template() ~ '.html.twig' %}
 		{# Modules that require external dependencies #}
 		{% if module_template == 'modular/pretix-calendar.html.twig' and module.header.css_url and module.header.js_url %}
 			{% do assets.addJs(module.header.js_url, { loading: 'async	', crossorigin: 'anonymous' }) %}

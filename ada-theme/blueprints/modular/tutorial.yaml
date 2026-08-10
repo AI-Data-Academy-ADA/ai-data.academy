@@ -7,25 +7,38 @@ form:
       type: section
       title: Tutorials Configuration
 
-    tutorials:
-      type: array
+    header.tutorials:
+      type: list
+      style: vertical
       label: Tutorials
       description: Define which tutorials should be available in the classification widget
       help: Add tutorial IDs and their display types
       add: Add Tutorial
       fields:
-        id:
+        .group:
+          label: Group Name
+          description: Name of the group of tutorials (e.g. Image Classification)
           type: text
-          label: Tutorial ID
-          placeholder: '6a4cb7a49729e200110fa22b'
-          help: MongoDB ObjectId of the tutorial
           validate:
             required: true
-        type:
-          type: select
-          label: Display Type
-          description: How this tutorial should be displayed in the widget
-          options:
-            'image': Image Gallery
-            'orientation': Orientation/Navigation
-          default: 'image'
+        .tutorials:
+          type: list
+          style: vertical
+          description: Mongo DB id and type of tool to use (orientation / image)
+          label: ID / Type
+          fields:
+            .id:
+              type: text
+              label: Tutorial ID
+              placeholder: "6a4cb7a49729e200110fa22b"
+              help: MongoDB ObjectId of the tutorial
+              validate:
+                required: true
+            .type:
+              type: select
+              label: Display Type
+              description: How this tutorial should be displayed in the widget
+              options:
+                "image": Image Gallery
+                "orientation": Orientation/Navigation
+              default: "image"
