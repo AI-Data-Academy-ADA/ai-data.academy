@@ -1,6 +1,5 @@
 ---
 title: Tutorial Classification Widget
-widget_script: tutorial-classification-widget.js
 tutorials:
   - group: Modul 1
     tutorials:

@@ -1,5 +1,8 @@
 {% extends 'partials/base.html.twig' %}
 
+{% set default_map_css_url = 'https://unpkg.com/maplibre-gl@^5.24.0/dist/maplibre-gl.css' %}
+{% set default_map_js_url = 'https://unpkg.com/maplibre-gl@^5.24.0/dist/maplibre-gl.js' %}
+
 {% block stylesheets %}
 	{{ parent() }}
 	{% for module in page.collection() %}
@@ -10,12 +13,10 @@
 		{# Modules that require external dependencies #}
 		{% if module_template == 'modular/pretix-calendar.html.twig' and module.header.css_url and module.header.js_url %}
 			{% do assets.addCss(module.header.css_url, { crossorigin: 'anonymous' }) %}
-			{% do assets.addJs(module.header.js_url, { loading: 'async	', crossorigin: 'anonymous' }) %}
 		{% endif %}
 
 		{% if module_template == 'modular/geojson-map.html.twig' %}
-			{% do assets.addCss(module.header.map_css_url|default('https://unpkg.com/maplibre-gl@^5.24.0/dist/maplibre-gl.css'), { crossorigin: 'anonymous' }) %}
-			{% do assets.addJs(module.header.map_js_url|default('https://unpkg.com/maplibre-gl@^5.24.0/dist/maplibre-gl.js'), { crossorigin: 'anonymous' }) %}
+			{% do assets.addCss(module.header.map_css_url|default(default_map_css_url), { crossorigin: 'anonymous' }) %}
 		{% endif %}
 	{% endfor %}
 
@@ -24,8 +25,19 @@
 {% block javascripts %}
 	{{ parent() }}
 	{% for module in page.collection() %}
-		{% set module_js = 'theme://js/' ~ module.template() ~ '.js' %}
+		{% set module_name = module.template()|replace('modular/', '') %}
+		{% set module_js = 'theme://js/' ~ module_name ~ '.js' %}
 		{% do assets.addJs(module_js, { group: 'bottom' }) ~ compress %}
+
+		{% set module_template = module.template() ~ '.html.twig' %}
+		{# Modules that require external dependencies #}
+		{% if module_template == 'modular/pretix-calendar.html.twig' and module.header.css_url and module.header.js_url %}
+			{% do assets.addJs(module.header.js_url, { loading: 'async	', crossorigin: 'anonymous' }) %}
+		{% endif %}
+
+		{% if module_template == 'modular/geojson-map.html.twig' %}
+			{% do assets.addJs(module.header.map_js_url|default(default_map_js_url), { crossorigin: 'anonymous' }) %}
+		{% endif %}
 	{% endfor %}
 {% endblock %}
 
