@@ -1,3 +1,11 @@
-# Grundlagen von KI & Technologie
+# Werde Teil der AI &amp; Data Academy
 
-In Hackathons, Workshops und Projekttagen erhalten Schüler:innen ab Klasse 7 eine Einführung in die Programmierung und die Grundlagen von Umweltbildung. Gemeinsam entwickeln wir Ideen und Konzepte - sei dabei!
+### Du bist zwischen 12 und 16 Jahren und hast Lust auf KI, Daten und digitale Tools?
+
+#### In der AI &amp; Data Academy kannst du ausprobieren, wie Künstliche Intelligenz wirklich funktioniert – und selbst aktiv werden.
+
+#### Entwickle eigene Ideen, arbeite mit Daten und erlebe bei unseren KI-Days direkt in Unternehmen, wie KI heute schon eingesetzt wird.
+
+#### Lerne neue Tools kennen, triff Expert:innen und entdecke spannende Berufsfelder rund um Informatik und Technologie.
+
+### Mach mit und gestalte deine digitale Zukunft selbst!
