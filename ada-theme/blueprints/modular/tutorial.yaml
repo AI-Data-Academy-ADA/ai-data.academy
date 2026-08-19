@@ -24,7 +24,7 @@ form:
         .tutorials:
           type: list
           style: vertical
-          description: Mongo DB id and type of tool to use (orientation / image)
+          description: Mongo DB id and type of tool to use (orientation / spell / image)
           label: ID / Type
           fields:
             .id:
@@ -40,6 +40,7 @@ form:
               description: How this tutorial should be displayed in the widget
               options:
                 "": None
-                "image": Image Gallery
-                "orientation": Orientation/Navigation
+                "image": Image
+                "orientation": Orientation
+                "spell": Spell
               default: "image"
