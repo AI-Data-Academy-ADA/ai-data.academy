@@ -2,8 +2,8 @@ body {
   position: relative;
   min-height: 100dvh;
 
-  --ada-right-width: 512px;
-  --ada-right-pos-x: 96px;
+  --ada-right-width: 677px;
+  --ada-right-pos-x: 104px;
   --ada-right-pos-y: 8rem;
   --ada-right-opacity: 0.2;
 }
@@ -11,7 +11,7 @@ body {
 body::before {
   position: absolute;
   content: "";
-  background: url("../images/robo-ada3.png");
+  background: url("../images/liquid1.png");
   background-repeat: no-repeat;
   background-position: var(--ada-right-pos-x) var(--ada-right-pos-y);
   top: 0;

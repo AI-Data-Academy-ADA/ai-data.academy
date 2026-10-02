@@ -9,6 +9,10 @@
   .ada-hero__level {
     margin: 0 auto;
     width: clamp(42ch, 60%, 1216px);
+
+    .level-right {
+      flex-shrink: 0.5;
+    }
   }
 
   @media screen and (max-width: 768px) {
@@ -35,6 +39,7 @@
   background-image: url("../../images/hero-bg.svg");
   background-size: cover;
   background-repeat: no-repeat;
+  padding: 0;
 }
 
 .navbar:not(:has(.is-active)) {

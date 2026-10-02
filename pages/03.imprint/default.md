@@ -2,6 +2,7 @@
 title: Impressum
 taxonomy:
   tag: "quicklink"
+ada_right: true
 ---
 
 # Lorem Ipsum
