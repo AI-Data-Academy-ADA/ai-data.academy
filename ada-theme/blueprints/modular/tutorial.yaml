@@ -44,3 +44,8 @@ form:
                 "orientation": Orientation
                 "spell": Spell
               default: "image"
+            .classification_steps:
+              type: text
+              label: Classification Tool Steps
+              placeholder: "1-3, 5"
+              help: Steps (1-based, as shown in "Schritt X / Y") on which the classification tool is visible. Leave empty to show it on all steps.

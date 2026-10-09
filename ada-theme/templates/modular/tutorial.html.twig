@@ -1,7 +1,7 @@
 {# Tutorial Classification Widget Module Template #}
 {# Frontmatter:
      widget_root_id — override the mount point ID (auto-derived from widget_script if omitted)
-     tutorials — JSON array of tutorial objects with id and type fields
+     tutorials — JSON array of tutorial objects with id, type and optional classification_steps (e.g. "1-3, 5") fields
      media_base_path — base path for tutorial media #}
 {% set tutorials = page.header.tutorials ?? [] %}
 {% set media_base_path = page.header.media_base_path ?? url('theme://images/tutorial', true, true) %}
