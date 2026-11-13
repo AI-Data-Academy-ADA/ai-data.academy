@@ -63,3 +63,7 @@
 .uppercase-text {
   text-transform: uppercase;
 }
+
+@view-transition {
+  navigation: auto;
+}
